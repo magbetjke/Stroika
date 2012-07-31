@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:comps="lightboxGallery.*">
+
+    <comps:GalleryImage id="shownImage" width="263" height="157" click="showNext()"/>
+
+    <mx:Image id="zoomBtn"
+              x="{shownImage.width - zoomBtn.width - 15}" y="{shownImage.height - zoomBtn.height - 15}"
+              alpha=".5"
+              source="@Embed(source='assets/plus.png')"
+              mouseOver="{zoomBtn.alpha = 1}" mouseOut="{zoomBtn.alpha = .5}"
+              click="openLightBox()"/>
+    <mx:Box paddingTop="10" paddingLeft="10">
+        <mx:UIComponent id="modalLayer" width="{shownImage.width - 20}" height="{shownImage.height - 20}"/>
+    </mx:Box>
+    <mx:Script><![CDATA[
+        import data.CachedBitmaps;
+        import data.MainModel;
+
+        import mx.validators.StringValidator;
+
+        private var _dataProvider:Vector.<String>;
+        private var _loader:Loader;
+
+        private var _counter:int = 0;
+        private var _progress:int = 0;
+
+        private var _bitmaps:Vector.<Bitmap>;
+
+        private var _selectedImageIndex:int = -1;
+
+        public function set dataProvider(value:Vector.<String>):void {
+            if (_dataProvider == value) return;
+
+            _dataProvider = value;
+
+            _bitmaps = new <Bitmap>[];
+
+            _selectedImageIndex = -1;
+
+            loadImages();
+        }
+
+        private function loadImages():void {
+            if (_dataProvider && _dataProvider.length){ 
+                var toLoad:Vector.<String> = new <String>[];
+                for each (var url:String in _dataProvider) {
+                    var urlHost:String = MainModel.HOST + url;
+                    CachedBitmaps.isCached(urlHost) ? _bitmaps.push(CachedBitmaps.bitmapByUrl[urlHost]) : toLoad.push(urlHost);
+                }
+
+                if (toLoad.length == 0) {
+                    showNext();
+                    return;
+                }
+
+                modalLayer.visible = true;
+                GalleryProgressBar.instance.open(modalLayer);
+
+                _counter = toLoad.length;
+                _progress = _counter;
+                for each (url in toLoad) {
+                        var loader:Loader = new Loader();
+                        var urlRequest:URLRequest = new URLRequest(url);
+                        loader.contentLoaderInfo.addEventListener(Event.COMPLETE, onComplete);
+                        loader.addEventListener(IOErrorEvent.IO_ERROR, ioError);
+                        loader.addEventListener(IOErrorEvent.DISK_ERROR, ioError);
+                        loader.addEventListener(IOErrorEvent.NETWORK_ERROR, ioError);
+                        loader.addEventListener(IOErrorEvent.VERIFY_ERROR, ioError);
+
+                        loader.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, ioError);
+                        loader.contentLoaderInfo.addEventListener(IOErrorEvent.DISK_ERROR, ioError);
+                        loader.contentLoaderInfo.addEventListener(IOErrorEvent.NETWORK_ERROR, ioError);
+                        loader.contentLoaderInfo.addEventListener(IOErrorEvent.VERIFY_ERROR, ioError);
+                        loader.load(urlRequest);
+                }
+            } else {
+                shownImage.source = null;
+            }
+        }
+
+        private function ioError(event:IOErrorEvent):void {
+            _bitmaps.push(null);
+            decreaseCounter();
+        }
+
+        private function onComplete(event:Event):void {
+            //var bd:BitmapData =  Bitmap(event.currentTarget.content);
+            var bitmap:Bitmap = Bitmap(LoaderInfo(event.currentTarget).content);
+            CachedBitmaps.cache(LoaderInfo(event.currentTarget).url, bitmap);
+            _bitmaps.push(bitmap);
+            decreaseCounter();
+        }
+
+        private function decreaseCounter():void {
+            _counter--;
+            GalleryProgressBar.instance.progress((_progress - _counter) / _progress);
+
+            if (!_counter){
+                setTimeout(function x():void {
+                    GalleryProgressBar.instance.close();
+                    modalLayer.visible = false;
+                    showNext();
+                }, 500);
+            }
+        }
+
+        private function showNext():void {
+            if (!_bitmaps.length) return;
+            _selectedImageIndex = (_selectedImageIndex + 1) % _bitmaps.length;
+            shownImage.source = _bitmaps[_selectedImageIndex];
+
+        }
+
+        private function showPrev():void {
+            _selectedImageIndex = --_selectedImageIndex < 0 ? _bitmaps.length - 1 : _selectedImageIndex;
+            shownImage.source = _bitmaps[_selectedImageIndex];
+        }
+
+        private function openLightBox():void {
+            if (_selectedImageIndex >= 0 && _bitmaps[_selectedImageIndex]){
+                var bitmap:Bitmap = new Bitmap(_bitmaps[_selectedImageIndex].bitmapData);
+                LightBox.show(bitmap);
+            }
+        }
+
+        ]]></mx:Script>
+</mx:Canvas>

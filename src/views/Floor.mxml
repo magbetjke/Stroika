@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:s="spark.components.*" clipContent="false"
+           mouseOver="mouseOverHandler(event)"
+           mouseOut="mouseOutHandler(event)"
+           width="500"
+           horizontalCenter="0"
+           horizontalScrollPolicy="off" verticalScrollPolicy="off" creationComplete="init(event)"
+           height="{_img.height}">
+    <mx:Image id="floorImg" source="{_img}" horizontalCenter="0"/>
+    <mx:HBox id="markerHBox" height="100%" verticalAlign="middle" visible="{_floorData &amp;&amp; _floorData.type == FloorType.LIVING_FLOOR}"
+             x="{floorImg.x - markerHBox.width + 3}">
+        <mx:Box backgroundColor="{_selected ? 0x88b40f : 0xFFFFFF}">
+            <mx:Label text="{_floorData &amp;&amp; _floorData.floorNumber.toString()}" color="{_selected ? 0xFFFFFF : 0x676767}"/>
+        </mx:Box>
+        <mx:Image id="marker"
+                  source="{_selected ? BitmapFactory.getBitmap('floorMarkerGreen') : BitmapFactory.getBitmap('floorMarker')}"/>
+    </mx:HBox>
+    <mx:HBox id="apartmentsHBox" horizontalGap="0" horizontalCenter="0" paddingLeft="0" height="{_img.height}"/>
+    <mx:Script><![CDATA[
+        import data.ApartmentData;
+        import data.FloorData;
+        import data.FloorType;
+
+        import mx.containers.HBox;
+        import mx.events.FlexEvent;
+
+        import utils.BitmapFactory;
+
+        [Bindable]
+        private var _floorData:FloorData;
+
+        [Bindable]
+        private var _img:Bitmap;
+
+        private var _apartmentHBox:HBox;
+
+        [Bindable]
+        private var _selected:Boolean;
+
+
+        private var _apartmentViews:Vector.<ApartmentSmall> = new <ApartmentSmall>[];
+
+        public function get floorData():FloorData {
+            return _floorData;
+        }
+
+        public function set floorData(value:FloorData):void {
+            if (_floorData == value) return;
+
+            _floorData = value;
+            _img = BitmapFactory.getBitmap(_floorData.type);
+
+            updateView();
+        }
+        
+        private function updateView():void {
+            if (_created && _floorData && apartmentsHBox && _floorData.type != FloorType.TECH_FLOOR) {
+                if (apartmentsHBox.numElements)apartmentsHBox.removeAllElements();
+                _apartmentViews = new <ApartmentSmall>[];
+                for each (var apartment:ApartmentData in _floorData.apartments) {
+                    var apartmentView:ApartmentSmall = new ApartmentSmall();
+                    apartmentView.apartmentData = apartment;
+                    apartmentView.floorData = _floorData;
+                    _apartmentViews.push(apartmentView);
+                    apartmentsHBox.addElement(apartmentView);
+                }
+            }
+        }
+        
+        private var _created:Boolean;
+
+        private function init(event:FlexEvent):void {
+            _created = true;
+
+            updateView();
+        }
+
+        private function mouseOverHandler(event:MouseEvent):void {
+            _selected = true;
+            for each (var apartment:ApartmentSmall in _apartmentViews) {
+                apartment.select();
+            }
+        }
+
+        private function mouseOutHandler(event:MouseEvent):void {
+            _selected = false
+            for each (var apartment:ApartmentSmall in _apartmentViews) {
+                apartment.unselect();
+            }
+        }
+        ]]></mx:Script>
+</mx:Canvas>

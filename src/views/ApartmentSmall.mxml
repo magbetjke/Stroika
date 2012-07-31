@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:s="spark.components.*"
+           buttonMode="true"
+           click="clickHandler(event)" mouseOver="mouseOverHandler(event)" mouseOut="mouseOutHandler(event)">
+    <s:Image id="apartmentImg" source="{_img}" width="36" height="18" scaleMode="stretch"/>
+    <s:Label id="roomsCount" text="{_roomsCount}" color="#FFFFFF" width="100%" verticalAlign="middle" verticalCenter="0" textAlign="center" visible="false"/>
+    <mx:Script><![CDATA[
+        import data.ApartmentData;
+        import data.FloorData;
+        import data.MainModel;
+        import data.States;
+
+        import mx.controls.ToolTip;
+        import mx.core.FlexGlobals;
+
+        import spark.components.Application;
+
+        import toolTips.ToolTipFacade;
+
+        import utils.BitmapFactory;
+
+        private var _apartmentData:ApartmentData;
+
+        public var floorData:FloorData;
+
+        [Bindable]
+        private var _img:Bitmap;
+
+        [Bindable]
+        private var _roomsCount:String;
+
+        private var _unavailable:Boolean;
+
+        public function select():void {
+            if (_unavailable) return;
+
+            _img = BitmapFactory.getBitmap(ApartmentData.FREE);
+            roomsCount.visible = true;
+        }
+
+        public function unselect():void {
+            if (_unavailable) return;
+
+            _img = null;
+            roomsCount.visible = false;
+        }
+
+        public function get apartmentData():ApartmentData {
+            return _apartmentData;
+        }
+
+        public function set apartmentData(value:ApartmentData):void {
+            if (_apartmentData == value) return;
+
+            _apartmentData = value;
+
+            if (_apartmentData.state == ApartmentData.OCCUPIED || _apartmentData.state == ApartmentData.SOLD) {
+                _img = BitmapFactory.getBitmap(_apartmentData.state);
+                roomsCount.visible = false;
+                _unavailable = true;
+            }
+
+            _roomsCount = _apartmentData.rooms.toString();
+        }
+
+        private function clickHandler(event:MouseEvent):void {
+            MainModel.instance.selectedApartment = _apartmentData;
+            MainModel.instance.selectedFloor = floorData;
+
+            MainModel.instance.state = States.STEP3;
+        }
+
+        private function mouseOverHandler(event:MouseEvent):void {
+            ToolTipFacade.instance.openToolTip(_apartmentData, this, 100);
+
+        }
+
+        private function mouseOutHandler(event:MouseEvent):void {
+            ToolTipFacade.instance.closeToolTip();
+        }
+        ]]></mx:Script>
+</mx:Canvas>

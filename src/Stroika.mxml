@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark"
+               xmlns:views="views.*" creationComplete="creationCompleteHandler(event)">
+    <fx:Metadata>
+        [SWF(backgroundColor="0xFFFFFF", frameRate="60", width = "1500", height = "750")]
+    </fx:Metadata>
+
+    <fx:Style>
+
+        @namespace mx "library://ns.adobe.com/flex/mx";
+
+        mx|Panel {
+            dropShadowVisible: true;
+            borderAlpha: 1;
+            borderColor: #6e6e6e;
+            /*backgroundColor: #88b40f;*/
+            borderThickness: 3;
+/*            borderThicknessLeft: 2;
+            borderThicknessTop: 2;
+            borderThicknessBottom: 2;
+            borderThicknessRight: 2;*/
+            roundedBottomCorners: true;
+            cornerRadius: 10;
+        }
+
+    </fx:Style>
+
+    <s:VGroup>
+        <views:Step1 id="buildingSelection"
+                     showEffect="Fade"
+                     visible="{MainModel.instance.state == States.STEP1}" includeInLayout="{MainModel.instance.state == States.STEP1}"/>
+        <views:Step2 id="step2"
+                     dataProvider="{new BuildingData()}"
+                     showEffect="Fade"
+                     visible="{MainModel.instance.state == States.STEP2}" includeInLayout="{MainModel.instance.state == States.STEP2}"/>
+        <views:Step3 id="step3"
+                     dataProvider="{MainModel.instance.selectedFloor}"
+                     showEffect="Fade"
+                     visible="{MainModel.instance.state == States.STEP3}" includeInLayout="{MainModel.instance.state == States.STEP3}"/>
+    </s:VGroup>
+    <fx:Script><![CDATA[
+        import data.BuildingData;
+        import data.FloorData;
+        import data.MainModel;
+        import data.States;
+
+        import mx.events.FlexEvent;
+
+        private function creationCompleteHandler(event:FlexEvent):void {
+
+        }
+        ]]></fx:Script>
+</s:Application>

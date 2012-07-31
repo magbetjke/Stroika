@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<s:Group xmlns:s="library://ns.adobe.com/flex/spark" xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:views="views.*"
+         xmlns:mx="library://ns.adobe.com/flex/mx"
+         creationComplete="creationCompleteHandler(event)">
+    <s:BorderContainer rollOver="onMouseOver(event)" rollOut="onMouseOut(event)" width="{WIDTH}" height="{HEIGHT}">
+        <views:Building id="building1" maskImage="{BitmapFactory.getBitmap('maskB1')}" y="100"
+                        width="200" height="300"
+                        mouseOver="buildingMouseOver(event)"
+                        mouseOut="buildingMouseOut(event)" cacheAsBitmap="true"/>
+        <views:Building id="building2"
+                        maskImage="{BitmapFactory.getBitmap('maskB2')}"
+                        x="300" y="130"
+                        mouseOver="buildingMouseOver(event)"
+                        mouseOut="buildingMouseOut(event)" cacheAsBitmap="true"/>
+
+        <s:Image id="backgroundImg"
+                 mouseEnabled="false"
+                 mouseChildren="false"
+                 visible="true"
+                 source="{new _background}"
+                 width="{WIDTH}" height="{HEIGHT}"/>
+        <s:Image id="bluredImg"
+                 mouseEnabled="false"
+                 mouseChildren="false"
+                 visible="false"
+                 showEffect="{fadeIn}"
+                 hideEffect="{fadeOut}"
+                 width="{WIDTH}"
+                 height="{HEIGHT}"
+                 source="{new _backgroundBlur}"/>
+        <s:Image id="selectionImg"
+                 mouseEnabled="false"
+                 mouseChildren="false"
+                 visible="true"
+                 cacheAsBitmap="true"
+                 source="{new _background}"
+                 width="{WIDTH}" height="{HEIGHT}"/>
+    </s:BorderContainer>
+    <mx:UIComponent id="maskLayer" width="100%" height="100%" mouseChildren="false" mouseEnabled="false"/>
+    <fx:Declarations>
+        <s:Fade id="fadeIn" duration="500" target="{backgroundImg}" alphaFrom="0" alphaTo="1"/>
+        <s:Fade id="fadeOut" duration="200" target="{backgroundImg}" alphaFrom="1" alphaTo="0"/>
+    </fx:Declarations>
+    <fx:Script><![CDATA[
+        import mx.events.FlexEvent;
+
+        import spark.effects.Fade;
+
+        import utils.BitmapFactory;
+
+        [Embed(source="/assets/1.jpg")]
+        private var _background:Class;
+
+        [Embed(source="/assets/buildingsBlur.png")]
+        private var _backgroundBlur:Class;
+
+        [Embed(source="/assets/buildingMask.png")]
+        private var _buildingMask:Class;
+
+        private const WIDTH:int = 1000;
+        private const HEIGHT:int = 670;
+
+
+        private function onMouseOver(event:MouseEvent):void {
+            //backgroundImg.visible = false;
+        }
+
+        private function onMouseOut(event:MouseEvent):void {
+            //backgroundImg.mask = null;
+            //backgroundImg.endEffectsStarted();
+            //backgroundImg.visible = true;
+        }
+
+        private function creationCompleteHandler(event:FlexEvent):void {
+
+        }
+
+        private function buildingMouseOver(event:MouseEvent):void {
+            var building:Building = Building(event.currentTarget);
+            bluredImg.endEffectsStarted();
+            bluredImg.visible = true;
+            //selectionImg.visible = true;       
+            var bitmap:Bitmap = new Bitmap(building.img.bitmapData);
+            bitmap.x =  building.x;
+            bitmap.y = building.y;
+            bitmap.cacheAsBitmap = true;
+            maskLayer.addChild(bitmap);
+            selectionImg.mask = bitmap;
+        }
+
+        private function buildingMouseOut(event:MouseEvent):void {
+            bluredImg.visible = false;
+            maskLayer.removeChildren();
+        }
+        ]]></fx:Script>
+</s:Group>

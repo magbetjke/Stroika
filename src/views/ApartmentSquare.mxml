@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<mx:HBox xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:s="spark.components.*" xmlns:comps="lightboxGallery.*"
+         horizontalScrollPolicy="off" verticalScrollPolicy="off" clipContent="false">
+    <mx:Canvas width="300" height="100%" verticalScrollPolicy="off" clipContent="false">
+
+        <s:Image id="apartmentImage" width="100%" height="100%" scaleMode="letterbox" smooth="true" source="{dataProvider ? dataProvider.bitmap : null}"/>
+
+        <s:Image id="roza" width="100" height="100" scaleMode="letterbox" source="{BitmapFactory.getBitmap('roza')}" bottom="-100" smooth="true"/>
+        <s:Image id="zoomBtn" source="{BitmapFactory.getBitmap('zoom')}" alpha=".7"
+                 width="26" height="26" right="0" bottom="0" mouseOver="{zoomBtn.alpha = 1}" mouseOut="{zoomBtn.alpha = .7}"
+                 click="openLightBox()"/>
+    </mx:Canvas>
+
+    <mx:VBox>
+        <mx:HBox>
+            <mx:Label text="общая площадь"/>
+            <mx:Label text="{dataProvider ? dataProvider.square.toString() + 'м &#0178;' : ''}" fontWeight="bold"/>
+        </mx:HBox>
+        <mx:HBox>
+            <mx:Label text="жилая площадь"/>
+            <mx:Label text="{dataProvider ? dataProvider.liveSquare.toString() + 'м &#0178;' : ''}" fontWeight="bold"/>
+        </mx:HBox>
+        <mx:HBox>
+            <mx:Label text="санузлы"/>
+            <mx:Label text="{dataProvider ? (dataProvider.wctype ? 'раздельные' : 'совместные') : ''}" fontWeight="bold"/>
+        </mx:HBox>
+        <mx:HBox>
+            <mx:Label text="балкон"/>
+            <mx:Label text="{dataProvider ? dataProvider.square.toString() : ''}" fontWeight="bold"/>
+        </mx:HBox>
+        <mx:HBox>
+            <mx:Label text="цена за м &#0178;"/>
+            <mx:Label text="{dataProvider ? dataProvider.square.toString() : ''}" fontWeight="bold"/>
+        </mx:HBox>
+        <mx:HBox>
+            <mx:Label text="стоимость квартиры" fontWeight="bold"/>
+            <mx:Label text="{dataProvider ? dataProvider.price.toString() + 'руб.' : ''}" color="0x89c20b" fontWeight="bold"/>
+        </mx:HBox>
+
+        <comps:Gallery id="gallery" dataProvider="{dataProvider ? dataProvider.gallery : null}" width="263" height="157"/>
+    </mx:VBox>
+
+    <mx:Script><![CDATA[
+        import data.ApartmentData;
+
+        import lightboxGallery.LightBox;
+
+        import utils.BitmapFactory;
+
+        [Bindable]
+        public var dataProvider:ApartmentData;
+
+        private function openLightBox():void {
+            if (dataProvider && dataProvider.bitmap){
+                var bitmap:Bitmap = new Bitmap(dataProvider.bitmap.bitmapData);
+                LightBox.show(bitmap);
+            }
+        }
+
+        ]]></mx:Script>
+</mx:HBox>

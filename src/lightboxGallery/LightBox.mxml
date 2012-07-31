@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<comps:Dialog xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:s="spark.components.*"
+              paddingTop="12" paddingLeft="13" paddingRight="10"
+              paddingBottom="10"
+              mouseDownOutside="onClose()" xmlns:comps="lightboxGallery.*">
+
+    <mx:VBox id="printUI" width="100%" height="100%" borderColor="#000000">
+        <s:Image id="imgView" source="{_img}"
+                  smooth="true"
+                  width="{_img.width}" height="{_img.height}"
+                  scaleMode="stretch"
+                  filters="{[]}" click="onClose()"/>
+    </mx:VBox>
+
+    <mx:ControlBar id="controlBar_"
+                   horizontalAlign="right"
+                   verticalAlign="middle"
+                   paddingTop="0" paddingLeft="0"
+                   height="40">
+        <mx:Image id="print"
+                  source="@Embed(source='assets/Gnome-Printer-Printing-32.png')"
+                  width="28" height="28"
+                  click="onPrint()"
+                  filters="{[shadow]}"
+                  alpha=".7"
+                  mouseOver="{print.alpha = 1}" mouseOut="{print.alpha = .7}"/>
+        <mx:Image id="close"
+                  source="@Embed(source='assets/Gnome-Window-Close-64.png')"
+                  alpha=".7"
+                  filters="{[shadow]}"
+                  width="32" height="32"
+                  click="onClose()"
+                  mouseOver="{close.alpha = 1}" mouseOut="{close.alpha = .7}"/>
+    </mx:ControlBar>
+
+    <mx:DropShadowFilter id="shadow" angle="90" blurX="5" blurY="5" strength="2" distance="0" inner="false"/>
+    <mx:DropShadowFilter id="shadowMain" angle="90" alpha=".7" blurX="10" blurY="10" strength="2" distance="0" inner="false"/>
+    <mx:GlowFilter id="glow" color="#000000" alpha=".7" blurX="5" blurY="5" strength="10" inner="false"/>
+
+    <mx:Script>
+		<![CDATA[
+        import mx.core.Application;
+        import mx.core.FlexGlobals;
+        import mx.core.UIComponent;
+        import mx.printing.FlexPrintJob;
+
+        import spark.components.Application;
+
+
+        [Bindable]
+        private var _img:Bitmap;
+
+        public function init(img:Bitmap):void {
+            var scale:Number = 1;
+            var maxWidth:Number = FlexGlobals.topLevelApplication.width - 25;
+            var maxHeight:Number = FlexGlobals.topLevelApplication.height - 100;
+            
+            if (img.width > maxWidth) {
+                scale = maxWidth / img.height;
+            }
+            
+            if (img.height > maxHeight){
+                scale = Math.min(scale, maxHeight / img.height);
+            }
+            
+            img.scaleX = img.scaleY = scale;
+
+            _img = img;
+        }
+
+        public static function show(img:Bitmap):LightBox {
+            var dialog:LightBox = new LightBox();
+            dialog.init(img);
+            dialog.openPopUp();
+            return dialog;
+        }
+
+        private function onClose():void {
+            dispatchCancel();
+        }
+
+        private function onPrint():void {
+            try {
+                var flexPrintJob:FlexPrintJob = new FlexPrintJob();
+                if (flexPrintJob.start()) {
+                    flexPrintJob.printAsBitmap = false;
+                    flexPrintJob.addObject(printUI);
+                    flexPrintJob.send();
+                }
+            } catch (error:Error) {
+                //doNothing
+            }
+
+            onClose();
+
+        }
+
+
+        ]]>
+	</mx:Script>
+</comps:Dialog>

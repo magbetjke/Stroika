@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<mx:Canvas xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark" xmlns:views="views.*"
+           creationComplete="init(event)"
+           clipContent="true"
+           verticalScrollPolicy="off"
+           horizontalScrollPolicy="off" xmlns:mx="library://ns.adobe.com/flex/mx">
+
+    <s:Image id="floorPlan" width="500" height="500" mouseChildren="false" mouseEnabled="false" smooth="true"/>
+
+    <views:FloorSquareApartmentView id="ap1"
+                                    buttonMode="true"
+                                    alpha="0"
+                                    width="190" height="190"
+                                    click="clickElement(event)"
+                                    x="10" y="42"
+                                    mouseOver="mouseOverElement(event)" mouseOut="mouseOutElement(event)"
+                                    cacheAsBitmap="true"/>
+    <views:FloorSquareApartmentView id="ap2" alpha="0" buttonMode="true" width="195" height="194" click="clickElement(event)" x="158" y="37" cacheAsBitmap="true" mouseOver="mouseOverElement(event)" mouseOut="mouseOutElement(event)"/>
+    <views:FloorSquareApartmentView id="ap3" alpha="0" buttonMode="true" width="202" height="202" click="clickElement(event)" x="286" y="43" cacheAsBitmap="true" mouseOver="mouseOverElement(event)" mouseOut="mouseOutElement(event)"/>
+    <views:FloorSquareApartmentView id="ap4" alpha="0" buttonMode="true" width="125" height="125" click="clickElement(event)" x="375" y="188" cacheAsBitmap="true" mouseOver="mouseOverElement(event)" mouseOut="mouseOutElement(event)"/>
+    <views:FloorSquareApartmentView id="ap5" alpha="0" buttonMode="true" width="192" height="192" click="clickElement(event)" x="340" y="273" cacheAsBitmap="true" mouseOver="mouseOverElement(event)" mouseOut="mouseOutElement(event)"/>
+    <views:FloorSquareApartmentView id="ap6" alpha="0" buttonMode="true" width="181" height="182" click="clickElement(event)" x="283" y="273" cacheAsBitmap="true" mouseOver="mouseOverElement(event)" mouseOut="mouseOutElement(event)"/>
+    <views:FloorSquareApartmentView id="ap7" alpha="0" buttonMode="true" width="179" height="179" click="clickElement(event)" x="213" y="273" cacheAsBitmap="true" mouseOver="mouseOverElement(event)" mouseOut="mouseOutElement(event)"/>
+    <views:FloorSquareApartmentView id="ap8" alpha="0" buttonMode="true" width="178" height="178" click="clickElement(event)" x="156" y="273" cacheAsBitmap="true" mouseOver="mouseOverElement(event)" mouseOut="mouseOutElement(event)"/>
+    <views:FloorSquareApartmentView id="ap9" alpha="0" buttonMode="true" width="189" height="189" click="clickElement(event)" x="0" y="273" cacheAsBitmap="true" mouseOver="mouseOverElement(event)" mouseOut="mouseOutElement(event)"/>
+    <views:FloorSquareApartmentView id="ap10" alpha="0" buttonMode="true" width="125" height="125" click="clickElement(event)" x="0" y="188" cacheAsBitmap="true" mouseOver="mouseOverElement(event)" mouseOut="mouseOutElement(event)"/>
+
+
+    <s:Image id="zoomBtn" source="{BitmapFactory.getBitmap('zoom')}" alpha=".7"
+             width="26" height="26" right="30" bottom="30" mouseOver="{zoomBtn.alpha = 1}" mouseOut="{zoomBtn.alpha = .7}"
+             click="openLightBox()"/>
+    <fx:Script><![CDATA[
+        import data.ApartmentData;
+        import data.BuildingData;
+        import data.FloorData;
+        import data.MainModel;
+
+        import lightboxGallery.LightBox;
+
+        import mx.events.FlexEvent;
+
+        import utils.BitmapFactory;
+
+        import utils.IBitmapFactory;
+        import utils.Type23Factory;
+
+        private var _factory:IBitmapFactory;
+
+        private var _dataProvider:FloorData;
+        
+        private var creationComplete:Boolean;
+
+        [Bindable]
+        private var _selectedElement:FloorSquareApartmentView;
+
+        private var _apartments:Vector.<FloorSquareApartmentView> = new <FloorSquareApartmentView>[];
+
+        private function init(e:FlexEvent):void {
+
+            addEventListener(Event.ADDED_TO_STAGE, addedToStageHandler);
+
+            _apartments = new <FloorSquareApartmentView>[ap1, ap2, ap3, ap4, ap5, ap6, ap7, ap8, ap9, ap10];
+            
+            creationComplete = true;
+
+            update();
+        }
+
+        private function clickElement(event:MouseEvent):void {
+            var element:FloorSquareApartmentView = FloorSquareApartmentView(event.currentTarget);
+            if (element.state == FloorSquareApartmentView.SELECTED) return;
+            _selectedElement = element;
+            for each (var view:FloorSquareApartmentView in _apartments) {
+                if (view.state == FloorSquareApartmentView.SELECTED) {
+                    view.state = FloorSquareApartmentView.NORMAL;
+                    view.alpha = 0;
+                    break;
+                }
+            }
+            MainModel.instance.selectedApartment = element.dataProvider;
+            element.state = FloorSquareApartmentView.SELECTED;
+            element.alpha = 1;
+        }
+
+        private function keyDown(event:KeyboardEvent):void {
+            switch (event.keyCode) {
+                case Keyboard.UP:
+                    _selectedElement.y -= 1;
+                    break;
+                case Keyboard.DOWN:
+                    _selectedElement.y += 1;
+                    break;
+                case Keyboard.LEFT:
+                    _selectedElement.x -= 1;
+                    break;
+                case Keyboard.RIGHT:
+                    _selectedElement.x += 1;
+                    break;
+                case Keyboard.A:
+                    _selectedElement.width = _selectedElement.height -= 1;
+                    break;
+                case Keyboard.S:
+                    _selectedElement.width = _selectedElement.height += 1;
+                    break;
+                case Keyboard.TAB:
+                    trace('selectedPos', _selectedElement.x, ' :', _selectedElement.y, 'res: ', _selectedElement.width, ' :', _selectedElement.height);
+            }
+        }
+
+        private function addedToStageHandler(event:Event):void {
+            stage.addEventListener(KeyboardEvent.KEY_DOWN, keyDown);
+        }
+
+        private function mouseOverElement(event:MouseEvent):void {
+            var element:FloorSquareApartmentView = FloorSquareApartmentView(event.currentTarget);
+            if (element.state == FloorSquareApartmentView.SELECTED)
+                return;
+
+            element.state = FloorSquareApartmentView.OVER;
+
+            element.alpha = 1;
+        }
+
+        private function mouseOutElement(event:MouseEvent):void {
+            var element:FloorSquareApartmentView = FloorSquareApartmentView(event.currentTarget);
+            if (element.state == FloorSquareApartmentView.SELECTED)
+                return;
+
+            element.state = FloorSquareApartmentView.NORMAL;
+
+            element.alpha = 0;
+        }
+
+        public function get dataProvider():FloorData {
+            return _dataProvider;
+        }
+
+        public function set dataProvider(value:FloorData):void {
+            if (_dataProvider == value) return;
+
+            _dataProvider = value;
+
+            update();
+        }
+
+        private function update():void {
+            if (!creationComplete || !_dataProvider) return;
+            
+            floorPlan.source = _dataProvider.bitmap;
+
+            for each (var view:FloorSquareApartmentView in _apartments) {
+                var index:int = _apartments.indexOf(view);
+                var apartmentData:ApartmentData = _dataProvider.apartments[index];
+                view.dataProvider = apartmentData;
+                if (apartmentData == MainModel.instance.selectedApartment)
+                    view.dispatchEvent(new MouseEvent(MouseEvent.CLICK));
+            }
+        }
+
+        private function openLightBox():void {
+            if (_dataProvider && _dataProvider.bitmap){
+                var bitmap:Bitmap = new Bitmap(_dataProvider.bitmap.bitmapData);
+                LightBox.show(bitmap);
+            }
+        }
+        ]]></fx:Script>
+</mx:Canvas>

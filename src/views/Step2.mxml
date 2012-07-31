@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:s="spark.components.*" xmlns:views="views.*"
+         creationComplete="createBuildingFacade(event)">
+    <mx:VBox id="floorFacade" verticalGap="0" left="50" width="500"/>
+    <mx:Script><![CDATA[
+        import data.ApartmentData;
+        import data.BuildingData;
+        import data.FloorData;
+        import data.FloorType;
+
+        import mx.events.FlexEvent;
+
+        private var _dataProvider:BuildingData;
+        
+        private var _created:Boolean;
+
+        private function createBuildingFacade(event:FlexEvent):void {
+            _created = true;
+
+            updateBuildingFacade();
+        }
+
+        public function set dataProvider(value:BuildingData):void {
+            if (_dataProvider == value) return;
+            
+            _dataProvider = value;
+            
+            updateBuildingFacade();
+        }
+
+        private function updateBuildingFacade():void {
+            
+            if (floorFacade && floorFacade.numElements)floorFacade.removeAllElements();
+            
+            if (!_dataProvider || !_created) return;
+
+            //roof
+            var floorData:FloorData = new FloorData();
+            floorData.type = FloorType.ROOF;
+            var roof:Floor = new Floor();
+            roof.floorData = floorData;
+
+            floorFacade.addElement(roof);
+            //--
+
+            for each (floorData in _dataProvider.floors) {
+                var floor:Floor = new Floor();
+                floor.floorData = floorData;
+                floorFacade.addElement(floor);
+            }
+
+            floorData = new FloorData();
+            floorData.type = FloorType.TECH_FLOOR;
+            floor = new Floor();
+            floor.floorData = floorData;
+            floorFacade.addElement(floor);
+            if (_dataProvider.buildingType == BuildingData.TYPE_23)
+                floorFacade.addElement(floor);
+            
+        }
+        ]]></mx:Script>
+</mx:Canvas>

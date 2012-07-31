@@ -1,0 +1,73 @@
+<?xml version="1.0" ?>
+<tooltips:ToolTipData xmlns:mx="http://www.adobe.com/2006/mxml"
+                      creationPolicy="all"
+
+                      verticalScrollPolicy="off"
+                      horizontalScrollPolicy="off" xmlns:tooltips="toolTips.*"
+        >
+    <mx:Canvas width="100%" height="100%">
+        <mx:Image id="background" source="{BitmapFactory.getBitmap('toolTipFacade')}"/>
+        <mx:HBox x="10" y="10" horizontalGap="0">
+
+            <mx:Label text="Площадь: "/>
+            <mx:Label text="{_apartmentData ? _apartmentData.square.toString() + ' м&#0178;' : ''}"/>
+        </mx:HBox>
+        <mx:HBox x="10" y="30" horizontalGap="0">
+            <mx:Label text="Цена: "/>
+            <mx:Label text="{_apartmentData ? _apartmentData.price.toString() + ' руб.' : ''}"/>
+        </mx:HBox>
+    </mx:Canvas>
+    <mx:Script><![CDATA[
+        import data.ApartmentData;
+
+        import mx.core.Application;
+
+        import mx.core.UIComponent;
+
+        import utils.BitmapFactory;
+
+        [Bindable]
+        private var _apartmentData:ApartmentData;
+
+        override protected function commitProperties():void {
+            super.commitProperties();
+
+            if (!dataToolTip)return;
+
+            _apartmentData = dataToolTip as ApartmentData;
+        }
+
+        override protected function changeDataToolTip(newValue:Object):void {
+            callLater(function () {
+                validateNow();
+                visible = true;
+            });
+        }
+
+
+        override protected function validatePosition():void {
+            var app:UIComponent = UIComponent(Application.application);
+
+            var targetPoint:Point = target.parent.localToGlobal(new Point(target.x, target.y));
+            var p:Point = new Point(targetPoint.x, targetPoint.y + target.height);
+
+            trace(app.mouseX,  app.mouseY);
+            p.x = Math.min(app.width - width, p.x);
+            if (p.y + height > app.height && (p.y - height - offset.y > 0))p.y -= height + offset.y;
+
+            this.x = p.x;
+            this.y = p.y;
+
+        }
+
+        ///============= SINGLETON ===========================
+        private static var _instance:ToolTipFacade;
+
+        public static function get instance():ToolTipFacade {
+            if (!_instance)_instance = new ToolTipFacade();
+            return _instance;
+        }
+
+        //===================================================
+        ]]></mx:Script>
+</tooltips:ToolTipData>
