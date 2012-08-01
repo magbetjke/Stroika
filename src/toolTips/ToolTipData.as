@@ -16,6 +16,8 @@ import mx.managers.SystemManager;
 public class ToolTipData extends VBox {
     private var _dataToolTip:Object;
     public var target:UIComponent;
+    protected var preferX:Number;
+    protected var preferY:Number;
 
     public function ToolTipData() {
         mouseChildren = false;
@@ -65,7 +67,7 @@ public class ToolTipData extends VBox {
         return !Boolean(data);
     }
 
-    public function openToolTip(dataToolTip:Object, context:UIComponent, toolTipDelay:int = 400, ...rest):void {
+    public function openToolTip(dataToolTip:Object, context:UIComponent, toolTipDelay:int = 400, x:Number = NaN,  y:Number = NaN, ...rest):void {
 
         this.dataToolTip = dataToolTip;
         if (isEmptyData(dataToolTip)) {
@@ -77,6 +79,9 @@ public class ToolTipData extends VBox {
 
         clearTimeout(timer);
         timer = setTimeout(showToolTip, toolTipDelay);
+        
+        preferX = x;
+        preferY = y;
 
     }
 

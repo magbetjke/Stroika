@@ -30,6 +30,9 @@
             super.validatePosition();
 
             this.y = parent.y + 50;
+            
+            this.x = target.localToGlobal(new Point(preferX, 0)).x;
+            
 
         }
 

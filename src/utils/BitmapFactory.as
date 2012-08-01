@@ -56,6 +56,12 @@ public class BitmapFactory {
     [Embed(source="/assets/common/button.png")]
     private static var Button:Class;
 
+    [Embed(source="/assets/step1/topBuilding.png")]
+    private static var topBuilding:Class;
+
+    [Embed(source="/assets/step1/topBuildingOver.png")]
+    private static var topBuildingOver:Class;
+
 
 
     public static function getBitmap(type:String):Bitmap {
@@ -102,6 +108,10 @@ public class BitmapFactory {
                 return new Button;
             case 'arrow':
                 return new Arrow;
+            case 'topBuilding':
+                return new topBuilding;
+            case 'topBuildingOver':
+                return new topBuildingOver;
             default:
                 return null;
         }

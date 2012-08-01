@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:views="views.*" clipContent="false">
+    <views:BuildingFromTopView id="building1" index="1" top="100" left="20"/>
+    <views:BuildingFromTopView id="building2" index="2" top="160" left="120"/>
+    <views:BuildingFromTopView id="building3" index="3" top="220" left="220"/>
+    <views:BuildingFromTopView id="building4" index="4" top="50" left="120"/>
+    <views:BuildingFromTopView id="building5" index="5" top="110" left="220"/>
+</mx:Canvas>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:s="spark.components.*" xmlns:views="views.*">
 
-    <views:ButtonsBar  top="20" left="20" state="{States.STEP3}"/>
+    <views:ButtonsBar  top="10" left="20" state="{States.STEP3}"/>
 
     <views:FloorSquare  dataProvider="{dataProvider}" scaleX=".7" scaleY=".7" top="50" left="20"/>
 

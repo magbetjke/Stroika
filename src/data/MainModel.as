@@ -33,6 +33,9 @@ public class MainModel {
 
     [Bindable]
     public var state:String = States.STEP1;
+
+    [Bindable]
+    public var selectedBuildingIndex:int = 0;
 }
 }
 

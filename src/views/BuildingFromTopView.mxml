@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:s="spark.components.*"
+           buttonMode="true"
+           creationComplete="creationCompleteHandler(event)"
+           click="clickHandler(event)"
+           mouseOut="mouseOutHandler(event)"
+           mouseOver="mouseOverHandler(event)">
+    <s:Image id="normal" source="{BitmapFactory.getBitmap('topBuilding')}" visible="{_isNormal}"/>
+    <s:Image id="over" source="{BitmapFactory.getBitmap('topBuildingOver')}" visible="{!_isNormal}"/>
+    <s:Label text="{index}" color="#FFFFFF" fontSize="20" verticalCenter="0" horizontalCenter="0"/>
+    <mx:UIComponent id="hitAreaLayer" width="100%" height="100%"/>
+    <mx:Script><![CDATA[
+        import data.MainModel;
+        import data.States;
+
+        import mx.binding.utils.BindingUtils;
+        import mx.events.FlexEvent;
+
+        import utils.BitmapFactory;
+        import utils.BitmapUtil;
+
+        [Bindable]
+        public var index:int = 0;
+
+        [Bindable]
+        private var _isNormal:Boolean = true;
+
+
+        private function mouseOverHandler(event:MouseEvent = null):void {
+            _isNormal = false;
+            MainModel.instance.selectedBuildingIndex = index;
+        }
+
+        private function creationCompleteHandler(event:FlexEvent):void {
+/*            var hitArea:Sprite = BitmapUtil.createHitArea(BitmapFactory.getBitmap('topBuildingOver').bitmapData, 1);
+            hitAreaLayer.addChild(hitArea);
+            hitArea.visible = false;
+            this.hitArea = hitArea;*/
+            BindingUtils.bindSetter(selectedBuildingIndexChange, MainModel.instance, 'selectedBuildingIndex');
+        }
+
+        private function selectedBuildingIndexChange(value:int):void {
+            if (index == value)
+                mouseOverHandler();
+            else
+                _isNormal = true;
+        }
+
+        private function mouseOutHandler(event:MouseEvent):void {
+            _isNormal = true;
+            MainModel.instance.selectedBuildingIndex = 0;
+        }
+
+        private function clickHandler(event:MouseEvent):void {
+            _isNormal = false;
+            MainModel.instance.state = States.STEP2;
+            MainModel.instance.selectedBuildingIndex = 0;
+        }
+        ]]></mx:Script>
+</mx:Canvas>
