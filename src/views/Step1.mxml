@@ -2,14 +2,41 @@
 <s:Group xmlns:s="library://ns.adobe.com/flex/spark" xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:views="views.*"
          xmlns:mx="library://ns.adobe.com/flex/mx"
          creationComplete="creationCompleteHandler(event)">
-    <s:BorderContainer rollOver="onMouseOver(event)" rollOut="onMouseOut(event)" width="{WIDTH}" height="{HEIGHT}">
-        <views:Building id="building1" maskImage="{BitmapFactory.getBitmap('maskB1')}" y="100"
-                        width="200" height="300"
+    <s:Label text="Не готово" color="#000000" fontSize="20" verticalCenter="0" left="150"/>
+    <mx:Canvas width="611" height="408" verticalScrollPolicy="off" horizontalScrollPolicy="off" right="0">
+
+        <views:Building id="building1"
+                        maskImage="{BitmapFactory.getBitmap('maskB1')}" x="30" y="25"
+                        index="1"
+                        click="buildingClickHandler(event)"
                         mouseOver="buildingMouseOver(event)"
                         mouseOut="buildingMouseOut(event)" cacheAsBitmap="true"/>
         <views:Building id="building2"
+                        index="2"
                         maskImage="{BitmapFactory.getBitmap('maskB2')}"
-                        x="300" y="130"
+                        x="310" y="70"
+                        click="buildingClickHandler(event)"
+                        mouseOver="buildingMouseOver(event)"
+                        mouseOut="buildingMouseOut(event)" cacheAsBitmap="true"/>
+        <views:Building id="building3"
+                        index="3"
+                        maskImage="{BitmapFactory.getBitmap('maskB3')}"
+                        x="485" y="85"
+                        click="buildingClickHandler(event)"
+                        mouseOver="buildingMouseOver(event)"
+                        mouseOut="buildingMouseOut(event)" cacheAsBitmap="true"/>
+        <views:Building id="building4"
+                        maskImage="{BitmapFactory.getBitmap('maskB4')}"
+                        x="190" y="95"
+                        index="4"
+                        click="buildingClickHandler(event)"
+                        mouseOver="buildingMouseOver(event)"
+                        mouseOut="buildingMouseOut(event)" cacheAsBitmap="true"/>
+        <views:Building id="building5"
+                        maskImage="{BitmapFactory.getBitmap('maskB5')}"
+                        index="5"
+                        x="425" y="100"
+                        click="buildingClickHandler(event)"
                         mouseOver="buildingMouseOver(event)"
                         mouseOut="buildingMouseOut(event)" cacheAsBitmap="true"/>
 
@@ -18,15 +45,15 @@
                  mouseChildren="false"
                  visible="true"
                  source="{new _background}"
-                 width="{WIDTH}" height="{HEIGHT}"/>
+                 width="100%" height="100%"/>
         <s:Image id="bluredImg"
                  mouseEnabled="false"
                  mouseChildren="false"
                  visible="false"
                  showEffect="{fadeIn}"
                  hideEffect="{fadeOut}"
-                 width="{WIDTH}"
-                 height="{HEIGHT}"
+                 width="100%"
+                 height="100%"
                  source="{new _backgroundBlur}"/>
         <s:Image id="selectionImg"
                  mouseEnabled="false"
@@ -34,17 +61,24 @@
                  visible="true"
                  cacheAsBitmap="true"
                  source="{new _background}"
-                 width="{WIDTH}" height="{HEIGHT}"/>
-    </s:BorderContainer>
-    <mx:UIComponent id="maskLayer" width="100%" height="100%" mouseChildren="false" mouseEnabled="false"/>
+                 width="100%" height="100%"/>
+        <mx:UIComponent id="maskLayer" width="100%" height="100%" mouseChildren="false" mouseEnabled="false"/>
+    </mx:Canvas>
     <fx:Declarations>
         <s:Fade id="fadeIn" duration="500" target="{backgroundImg}" alphaFrom="0" alphaTo="1"/>
         <s:Fade id="fadeOut" duration="200" target="{backgroundImg}" alphaFrom="1" alphaTo="0"/>
     </fx:Declarations>
     <fx:Script><![CDATA[
+        import data.MainModel;
+        import data.States;
+
+        import mx.controls.Alert;
+
         import mx.events.FlexEvent;
 
         import spark.effects.Fade;
+
+        import toolTips.ToolTipStep1;
 
         import utils.BitmapFactory;
 
@@ -56,10 +90,6 @@
 
         [Embed(source="/assets/buildingMask.png")]
         private var _buildingMask:Class;
-
-        private const WIDTH:int = 1000;
-        private const HEIGHT:int = 670;
-
 
         private function onMouseOver(event:MouseEvent):void {
             //backgroundImg.visible = false;
@@ -81,16 +111,24 @@
             bluredImg.visible = true;
             //selectionImg.visible = true;       
             var bitmap:Bitmap = new Bitmap(building.img.bitmapData);
-            bitmap.x =  building.x;
+            bitmap.x = building.x;
             bitmap.y = building.y;
+            bitmap.width = building.width;
             bitmap.cacheAsBitmap = true;
             maskLayer.addChild(bitmap);
             selectionImg.mask = bitmap;
+            ToolTipStep1.instance.openToolTip(building.index, maskLayer, 100);
         }
 
         private function buildingMouseOut(event:MouseEvent):void {
             bluredImg.visible = false;
             maskLayer.removeChildren();
+            ToolTipStep1.instance.closeToolTip();
+        }
+
+        private function buildingClickHandler(event:MouseEvent):void {
+            var building:Building = Building(event.currentTarget);
+            MainModel.instance.state = States.STEP2;
         }
         ]]></fx:Script>
 </s:Group>

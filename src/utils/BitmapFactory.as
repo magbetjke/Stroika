@@ -48,6 +48,14 @@ public class BitmapFactory {
     [Embed(source="/assets/step1/maskB5.png")]
     private static var MaskB5:Class;
 
+    [Embed(source="/assets/step1/toolTip.png")]
+    private static var ToolTipStep1:Class;
+
+    [Embed(source="/assets/common/arrow.png")]
+    private static var Arrow:Class;
+    [Embed(source="/assets/common/button.png")]
+    private static var Button:Class;
+
 
 
     public static function getBitmap(type:String):Bitmap {
@@ -70,34 +78,30 @@ public class BitmapFactory {
                 return new FloorMarkerGreen;
             case 'selectedArea':
                 return new SelectedArea;
-                break;
             case 'selectionFlag':
                 return new SelectionFlag;
-                break;
             case 'roza':
                 return new Roza;
-                break;
             case 'zoom':
                 return new Zoom;
-                break;
             case 'toolTipFacade':
                 return new ToolTipFacade;
-                break;
             case 'maskB1':
                 return new MaskB1;
-                break;
             case 'maskB2':
                 return new MaskB2;
-                break;
             case 'maskB3':
                 return new MaskB3;
-                break;
             case 'maskB4':
                 return new MaskB4;
-                break;
             case 'maskB5':
                 return new MaskB5;
-                break;
+            case 'toolTipStep1':
+                return new ToolTipStep1;
+            case 'button':
+                return new Button;
+            case 'arrow':
+                return new Arrow;
             default:
                 return null;
         }

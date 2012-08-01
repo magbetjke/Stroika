@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<comp:ToolTipData xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:comp="toolTips.*">
+    <mx:Canvas width="100%" height="100%">
+        <mx:Image id="background" source="{BitmapFactory.getBitmap('toolTipStep1')}"/>
+        <mx:Label text="{'Литера ' + index}" color="#FFFFFF" x="10" y="10" fontSize="16"/>
+    </mx:Canvas>
+    <mx:Script><![CDATA[
+        import utils.BitmapFactory;
+
+        [Bindable]
+        private var index:int = 0;
+
+        override protected function commitProperties():void {
+            super.commitProperties();
+
+            if (!dataToolTip)return;
+
+            index = dataToolTip as int;
+        }
+
+        override protected function changeDataToolTip(newValue:Object):void {
+            callLater(function () {
+                validateNow();
+                visible = true;
+            });
+        }
+
+
+        override protected function validatePosition():void {
+            super.validatePosition();
+
+            this.y = parent.y + 50;
+
+        }
+
+        ///============= SINGLETON ===========================
+        private static var _instance:ToolTipStep1;
+
+        public static function get instance():ToolTipStep1 {
+            if (!_instance)_instance = new ToolTipStep1();
+            return _instance;
+        }
+        ]]></mx:Script>
+</comp:ToolTipData>

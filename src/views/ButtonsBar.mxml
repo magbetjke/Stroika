@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<mx:HBox xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:s="spark.components.*"
+         verticalAlign="middle">
+    <mx:Canvas id="btnBackToBuilds"
+               mouseOver="{btnLbl.setStyle('color', '#e3e3e3');btnBackToBuilds.filters = [glow]}"
+               mouseOut="{btnLbl.setStyle('color', '#FFFFFF');btnBackToBuilds.filters = []}"
+               click="{MainModel.instance.state = States.STEP1}">
+        <s:Image id="btnImg" source="{BitmapFactory.getBitmap('button')}"/>
+        <s:Label id="btnLbl"
+                 text="Выбор корпуса"
+                 width="100%"
+                 verticalCenter="0"
+                 fontSize="18"
+                 textAlign="center"
+                 color="#FFFFFF"/>
+    </mx:Canvas>
+    <s:Image id="arrow" source="{BitmapFactory.getBitmap('arrow')}"/>
+    <s:Label text="Выбор этажа" color="#000000" fontSize="18" visible="{state == States.STEP2}" includeInLayout="{state == States.STEP2}"/>
+    <mx:Canvas id="btnBackToFacade"
+               visible="{state == States.STEP3}" includeInLayout="{state == States.STEP3}"
+               mouseOver="{btnBackToFacadeLbl.setStyle('color', '#e3e3e3');btnBackToFacade.filters = [glow]}"
+               mouseOut="{btnBackToFacadeLbl.setStyle('color', '#FFFFFF');btnBackToFacade.filters = []}"
+               click="{MainModel.instance.state = States.STEP2}">
+        <s:Image id="btnBackToFacadeImg" source="{BitmapFactory.getBitmap('button')}"/>
+        <s:Label id="btnBackToFacadeLbl"
+                 text="Выбор этажа"
+                 width="100%"
+                 verticalCenter="0"
+                 fontSize="18"
+                 textAlign="center"
+                 color="#FFFFFF"/>
+    </mx:Canvas>
+    <s:Image id="arrow2" source="{BitmapFactory.getBitmap('arrow')}" visible="{state == States.STEP3}" includeInLayout="{state == States.STEP3}"/>
+    <s:Label text="Выбор квартиры" color="#000000" fontSize="18" visible="{state == States.STEP3}" includeInLayout="{state == States.STEP3}"/>
+
+    <mx:GlowFilter id="glow" color="#FFFFFF" blurX="15" blurY="15" strength=".5" alpha=".4" inner="true"/>
+    <mx:Script><![CDATA[
+        import data.MainModel;
+        import data.States;
+
+        import utils.BitmapFactory;
+
+        [Bindable]
+        public var state:String;
+        ]]></mx:Script>
+</mx:HBox>

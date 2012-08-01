@@ -26,7 +26,7 @@
     <views:FloorSquareApartmentView id="ap10" alpha="0" buttonMode="true" width="125" height="125" click="clickElement(event)" x="0" y="188" cacheAsBitmap="true" mouseOver="mouseOverElement(event)" mouseOut="mouseOutElement(event)"/>
 
 
-    <s:Image id="zoomBtn" source="{BitmapFactory.getBitmap('zoom')}" alpha=".7"
+    <s:Image id="zoomBtn" source="{BitmapFactory.getBitmap('zoom')}" alpha=".7" scaleMode="letterbox" scaleX="1.4" scaleY="1.4"
              width="26" height="26" right="30" bottom="30" mouseOver="{zoomBtn.alpha = 1}" mouseOut="{zoomBtn.alpha = .7}"
              click="openLightBox()"/>
     <fx:Script><![CDATA[

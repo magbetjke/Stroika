@@ -1,14 +1,23 @@
 <?xml version="1.0"?>
-<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:s="spark.components.*" xmlns:views="views.*"
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:s="spark.components.*" xmlns:views="views.*"  width="100%" height="100%"
          creationComplete="createBuildingFacade(event)">
-    <mx:VBox id="floorFacade" verticalGap="0" left="50" width="500"/>
+    
+    <views:ButtonsBar  top="20" left="20" state="{States.STEP2}"/>
+        
+    <mx:VBox id="floorFacade" verticalGap="0" right="30"  top="20" width="500"/>
+    
+    
     <mx:Script><![CDATA[
         import data.ApartmentData;
         import data.BuildingData;
         import data.FloorData;
         import data.FloorType;
+        import data.MainModel;
+        import data.States;
 
         import mx.events.FlexEvent;
+
+        import utils.BitmapFactory;
 
         private var _dataProvider:BuildingData;
         

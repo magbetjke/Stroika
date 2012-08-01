@@ -54,7 +54,7 @@
         }
         
         private function updateView():void {
-            if (_created && _floorData && apartmentsHBox && _floorData.type != FloorType.TECH_FLOOR) {
+            if (_created && _floorData && apartmentsHBox && _floorData.type == FloorType.LIVING_FLOOR) {
                 if (apartmentsHBox.numElements)apartmentsHBox.removeAllElements();
                 _apartmentViews = new <ApartmentSmall>[];
                 for each (var apartment:ApartmentData in _floorData.apartments) {

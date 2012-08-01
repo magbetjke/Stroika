@@ -53,7 +53,7 @@
         public function init(img:Bitmap):void {
             var scale:Number = 1;
             var maxWidth:Number = FlexGlobals.topLevelApplication.width - 25;
-            var maxHeight:Number = FlexGlobals.topLevelApplication.height - 100;
+            var maxHeight:Number = FlexGlobals.topLevelApplication.height - 70;
             
             if (img.width > maxWidth) {
                 scale = maxWidth / img.height;

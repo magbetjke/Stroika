@@ -2,7 +2,7 @@
 <s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark"
                xmlns:views="views.*" creationComplete="creationCompleteHandler(event)">
     <fx:Metadata>
-        [SWF(backgroundColor="0xFFFFFF", frameRate="60", width = "1500", height = "750")]
+        [SWF(backgroundColor="0xFFFFFF", frameRate="60", width = "1000", height = "408")]
     </fx:Metadata>
 
     <fx:Style>
@@ -28,13 +28,16 @@
     <s:VGroup>
         <views:Step1 id="buildingSelection"
                      showEffect="Fade"
+                     width="{width}" height="{height}"
                      visible="{MainModel.instance.state == States.STEP1}" includeInLayout="{MainModel.instance.state == States.STEP1}"/>
         <views:Step2 id="step2"
                      dataProvider="{new BuildingData()}"
+                     width="{width}" height="{height}"
                      showEffect="Fade"
                      visible="{MainModel.instance.state == States.STEP2}" includeInLayout="{MainModel.instance.state == States.STEP2}"/>
         <views:Step3 id="step3"
                      dataProvider="{MainModel.instance.selectedFloor}"
+                     width="{width}" height="{height}"
                      showEffect="Fade"
                      visible="{MainModel.instance.state == States.STEP3}" includeInLayout="{MainModel.instance.state == States.STEP3}"/>
     </s:VGroup>

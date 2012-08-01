@@ -52,8 +52,8 @@
             var p:Point = new Point(targetPoint.x, targetPoint.y + target.height);
 
             trace(app.mouseX,  app.mouseY);
-            p.x = Math.min(app.width - width, p.x);
-            if (p.y + height > app.height && (p.y - height - offset.y > 0))p.y -= height + offset.y;
+            //p.x = Math.min(app.width - width, p.x);
+            //if (p.y + height > app.height && (p.y - height - offset.y > 0))p.y -= height + offset.y;
 
             this.x = p.x;
             this.y = p.y;

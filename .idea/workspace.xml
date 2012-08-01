@@ -65,8 +65,8 @@
       <property name="field_breakpoints_groupByClasses" value="true" />
       <property name="method_breakpoints_groupByClasses" value="true" />
       <property name="exception_breakpoints_viewId" value="TABLE" />
-      <property name="exception_breakpoints_groupByClasses" value="true" />
       <property name="field_breakpoints_viewId" value="TABLE" />
+      <property name="exception_breakpoints_groupByClasses" value="true" />
       <property name="method_breakpoints_groupByMethods" value="false" />
     </ui_properties>
   </component>
@@ -75,55 +75,142 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Gallery.mxml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lightboxGallery/Gallery.mxml">
+      <file leaf-file-name="Step1.mxml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/Step1.mxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="35" selection-start="4103" selection-end="4103" vertical-scroll-proportion="-65.82143">
+            <state line="13" column="117" selection-start="849" selection-end="849" vertical-scroll-proportion="-8.821428">
               <folding>
-                <marker date="1343594899000" expanded="false" signature="733:830" placeholder="..." />
-                <marker date="1343594899000" expanded="true" signature="1165:1366" placeholder="{...}" />
-                <marker date="1343594899000" expanded="true" signature="1411:3274" placeholder="{...}" />
-                <marker date="1343594899000" expanded="true" signature="1467:3201" placeholder="{...}" />
-                <marker date="1343594899000" expanded="true" signature="1590:1800" placeholder="{...}" />
-                <marker date="1343594899000" expanded="true" signature="1842:1921" placeholder="{...}" />
-                <marker date="1343594899000" expanded="true" signature="2150:3187" placeholder="{...}" />
-                <marker date="1343594899000" expanded="true" signature="3207:3264" placeholder="{...}" />
-                <marker date="1343594899000" expanded="true" signature="3334:3409" placeholder="{...}" />
-                <marker date="1343594899000" expanded="true" signature="3465:3773" placeholder="{...}" />
-                <marker date="1343594899000" expanded="true" signature="3823:4196" placeholder="{...}" />
-                <marker date="1343594899000" expanded="true" signature="3962:4186" placeholder="{...}" />
-                <marker date="1343594899000" expanded="true" signature="4009:4165" placeholder="{...}" />
-                <marker date="1343594899000" expanded="true" signature="4239:4435" placeholder="{...}" />
-                <marker date="1343594899000" expanded="true" signature="4478:4657" placeholder="{...}" />
-                <marker date="1343594899000" expanded="true" signature="4704:4934" placeholder="{...}" />
-                <marker date="1343594899000" expanded="true" signature="4750:4779" placeholder="..." />
-                <marker date="1343594899000" expanded="true" signature="4780:4924" placeholder="{...}" />
+                <marker date="1343778890000" expanded="true" signature="3606:3833" placeholder="..." />
+                <marker date="1343778890000" expanded="true" signature="4164:4220" placeholder="{...}" />
+                <marker date="1343778890000" expanded="true" signature="4281:4426" placeholder="{...}" />
+                <marker date="1343778890000" expanded="true" signature="4295:4416" placeholder="//..." />
+                <marker date="1343778890000" expanded="true" signature="4499:4511" placeholder="{...}" />
+                <marker date="1343778890000" expanded="true" signature="4579:5170" placeholder="{...}" />
+                <marker date="1343778890000" expanded="true" signature="5237:5377" placeholder="{...}" />
+                <marker date="1343778890000" expanded="true" signature="5448:5579" placeholder="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ToolTipData.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/toolTips/ToolTipData.as">
+      <file leaf-file-name="Step2.mxml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/Step2.mxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="133" column="8" selection-start="3711" selection-end="4074" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="20" column="96" selection-start="672" selection-end="672" vertical-scroll-proportion="-7.464286">
+              <folding>
+                <marker date="1343779036000" expanded="false" signature="423:671" placeholder="..." />
+                <marker date="1343779036000" expanded="true" signature="837:914" placeholder="{...}" />
+                <marker date="1343779036000" expanded="true" signature="982:1138" placeholder="{...}" />
+                <marker date="1343779036000" expanded="true" signature="1193:2184" placeholder="{...}" />
+                <marker date="1343779036000" expanded="true" signature="1682:1836" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ToolTipFacade.mxml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ToolTipFacade.mxml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/toolTips/ToolTipFacade.mxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="80" selection-start="1801" selection-end="1801" vertical-scroll-proportion="-0.6785714">
+            <state line="54" column="14" selection-start="1863" selection-end="1863" vertical-scroll-proportion="0.55813956">
               <folding>
-                <marker date="1343597833000" expanded="true" signature="874:1004" placeholder="..." />
-                <marker date="1343597833000" expanded="true" signature="1136:1283" placeholder="{...}" />
-                <marker date="1343597833000" expanded="true" signature="1361:1487" placeholder="{...}" />
-                <marker date="1343597833000" expanded="true" signature="1397:1475" placeholder="{...}" />
-                <marker date="1343597833000" expanded="true" signature="1550:2065" placeholder="{...}" />
-                <marker date="1343597833000" expanded="true" signature="1946:1975" placeholder="..." />
-                <marker date="1343597833000" expanded="true" signature="2243:2344" placeholder="{...}" />
+                <marker date="1343779133000" expanded="false" signature="874:1004" placeholder="..." />
+                <marker date="1343779133000" expanded="true" signature="1136:1283" placeholder="{...}" />
+                <marker date="1343779133000" expanded="true" signature="1361:1487" placeholder="{...}" />
+                <marker date="1343779133000" expanded="true" signature="1397:1475" placeholder="{...}" />
+                <marker date="1343779133000" expanded="true" signature="1550:2069" placeholder="{...}" />
+                <marker date="1343779133000" expanded="true" signature="1861:2005" placeholder="//..." />
+                <marker date="1343779133000" expanded="true" signature="2247:2348" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Floor.mxml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/Floor.mxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="70" selection-start="1690" selection-end="1690" vertical-scroll-proportion="-9.5">
+              <folding>
+                <marker date="1343778969000" expanded="false" signature="1211:1401" placeholder="..." />
+                <marker date="1343778969000" expanded="true" signature="1757:1799" placeholder="{...}" />
+                <marker date="1343778969000" expanded="true" signature="1861:2038" placeholder="{...}" />
+                <marker date="1343778969000" expanded="true" signature="2091:2777" placeholder="{...}" />
+                <marker date="1343778969000" expanded="true" signature="2135:2149" placeholder="..." />
+                <marker date="1343778969000" expanded="true" signature="2153:2194" placeholder="..." />
+                <marker date="1343778969000" expanded="true" signature="2196:2767" placeholder="{...}" />
+                <marker date="1343778969000" expanded="true" signature="2419:2753" placeholder="{...}" />
+                <marker date="1343778969000" expanded="true" signature="2878:2945" placeholder="{...}" />
+                <marker date="1343778969000" expanded="true" signature="3012:3176" placeholder="{...}" />
+                <marker date="1343778969000" expanded="true" signature="3115:3166" placeholder="{...}" />
+                <marker date="1343778969000" expanded="true" signature="3242:3408" placeholder="{...}" />
+                <marker date="1343778969000" expanded="true" signature="3345:3398" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ButtonsBar.mxml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/ButtonsBar.mxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="47" selection-start="755" selection-end="755" vertical-scroll-proportion="-4.071429">
+              <folding>
+                <marker date="1343777157000" expanded="true" signature="2162:2242" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Step3.mxml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/Step3.mxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="60" selection-start="457" selection-end="457" vertical-scroll-proportion="-5.428571">
+              <folding>
+                <marker date="1343778536000" expanded="false" signature="498:606" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LightBox.mxml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/lightboxGallery/LightBox.mxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="47" selection-start="1780" selection-end="1780" vertical-scroll-proportion="-4.071429">
+              <folding>
+                <marker date="1343778653000" expanded="false" signature="1883:2062" placeholder="..." />
+                <marker date="1343778653000" expanded="true" signature="2164:2697" placeholder="{...}" />
+                <marker date="1343778653000" expanded="true" signature="2409:2471" placeholder="{...}" />
+                <marker date="1343778653000" expanded="true" signature="2524:2604" placeholder="{...}" />
+                <marker date="1343778653000" expanded="true" signature="2756:2906" placeholder="{...}" />
+                <marker date="1343778653000" expanded="true" signature="2948:2989" placeholder="{...}" />
+                <marker date="1343778653000" expanded="true" signature="3031:3443" placeholder="{...}" />
+                <marker date="1343778653000" expanded="true" signature="3049:3344" placeholder="{...}" />
+                <marker date="1343778653000" expanded="true" signature="3161:3330" placeholder="{...}" />
+                <marker date="1343778653000" expanded="true" signature="3365:3408" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FloorSquare.mxml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/FloorSquare.mxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="126" selection-start="3170" selection-end="3170" vertical-scroll-proportion="-19.0">
+              <folding>
+                <marker date="1343778389000" expanded="false" signature="3373:3678" placeholder="..." />
+                <marker date="1343778389000" expanded="true" signature="4061:4329" placeholder="{...}" />
+                <marker date="1343778389000" expanded="true" signature="4392:5090" placeholder="{...}" />
+                <marker date="1343778389000" expanded="true" signature="4680:4913" placeholder="{...}" />
+                <marker date="1343778389000" expanded="true" signature="4751:4899" placeholder="{...}" />
+                <marker date="1343778389000" expanded="true" signature="5151:6101" placeholder="{...}" />
+                <marker date="1343778389000" expanded="true" signature="5188:6091" placeholder="{...}" />
+                <marker date="1343778389000" expanded="true" signature="6166:6246" placeholder="{...}" />
+                <marker date="1343778389000" expanded="true" signature="6313:6606" placeholder="{...}" />
+                <marker date="1343778389000" expanded="true" signature="6672:6967" placeholder="{...}" />
+                <marker date="1343778389000" expanded="true" signature="7022:7067" placeholder="{...}" />
+                <marker date="1343778389000" expanded="true" signature="7132:7250" placeholder="{...}" />
+                <marker date="1343778389000" expanded="true" signature="7291:7860" placeholder="{...}" />
+                <marker date="1343778389000" expanded="true" signature="7493:7850" placeholder="{...}" />
+                <marker date="1343778389000" expanded="true" signature="7907:8108" placeholder="{...}" />
+                <marker date="1343778389000" expanded="true" signature="7963:8098" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -132,28 +219,11 @@
       <file leaf-file-name="ApartmentSquare.mxml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/ApartmentSquare.mxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="9" selection-start="2102" selection-end="2102" vertical-scroll-proportion="-6.321429">
+            <state line="3" column="37" selection-start="292" selection-end="292" vertical-scroll-proportion="-2.0357144">
               <folding>
-                <marker date="1343595762000" expanded="false" signature="2272:2370" placeholder="..." />
-                <marker date="1343595762000" expanded="true" signature="2484:2682" placeholder="{...}" />
-                <marker date="1343595762000" expanded="true" signature="2538:2672" placeholder="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Step1.mxml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/views/Step1.mxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="39" selection-start="3755" selection-end="3755" vertical-scroll-proportion="0.6785714">
-              <folding>
-                <marker date="1343627547000" expanded="false" signature="2217:2310" placeholder="..." />
-                <marker date="1343627547000" expanded="true" signature="2723:2779" placeholder="{...}" />
-                <marker date="1343627547000" expanded="true" signature="2840:2985" placeholder="{...}" />
-                <marker date="1343627547000" expanded="true" signature="2854:2975" placeholder="//..." />
-                <marker date="1343627547000" expanded="true" signature="3058:3070" placeholder="{...}" />
-                <marker date="1343627547000" expanded="true" signature="3138:3608" placeholder="{...}" />
-                <marker date="1343627547000" expanded="true" signature="3675:3765" placeholder="{...}" />
+                <marker date="1343778536000" expanded="false" signature="2320:2418" placeholder="..." />
+                <marker date="1343778536000" expanded="true" signature="2532:2730" placeholder="{...}" />
+                <marker date="1343778536000" expanded="true" signature="2586:2720" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -162,71 +232,8 @@
       <file leaf-file-name="Building.mxml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/Building.mxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="111" selection-start="213" selection-end="213" vertical-scroll-proportion="-1.3571428">
+            <state line="7" column="0" selection-start="299" selection-end="299" vertical-scroll-proportion="-4.75">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BuildingData.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/data/BuildingData.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="44" selection-start="382" selection-end="382" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Floor.mxml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/Floor.mxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="53" selection-start="1111" selection-end="1111" vertical-scroll-proportion="-11.535714">
-              <folding>
-                <marker date="1343597999000" expanded="false" signature="1211:1401" placeholder="..." />
-                <marker date="1343597999000" expanded="true" signature="1757:1799" placeholder="{...}" />
-                <marker date="1343597999000" expanded="true" signature="1861:2038" placeholder="{...}" />
-                <marker date="1343597999000" expanded="true" signature="2091:2775" placeholder="{...}" />
-                <marker date="1343597999000" expanded="true" signature="2135:2149" placeholder="..." />
-                <marker date="1343597999000" expanded="true" signature="2153:2192" placeholder="..." />
-                <marker date="1343597999000" expanded="true" signature="2194:2765" placeholder="{...}" />
-                <marker date="1343597999000" expanded="true" signature="2417:2751" placeholder="{...}" />
-                <marker date="1343597999000" expanded="true" signature="2876:2943" placeholder="{...}" />
-                <marker date="1343597999000" expanded="true" signature="3010:3174" placeholder="{...}" />
-                <marker date="1343597999000" expanded="true" signature="3113:3164" placeholder="{...}" />
-                <marker date="1343597999000" expanded="true" signature="3240:3406" placeholder="{...}" />
-                <marker date="1343597999000" expanded="true" signature="3343:3396" placeholder="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ApartmentSmall.mxml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/ApartmentSmall.mxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="47" selection-start="802" selection-end="802" vertical-scroll-proportion="-12.214286">
-              <folding>
-                <marker date="1343598055000" expanded="true" signature="533:838" placeholder="..." />
-                <marker date="1343598055000" expanded="true" signature="1126:1279" placeholder="{...}" />
-                <marker date="1343598055000" expanded="true" signature="1321:1436" placeholder="{...}" />
-                <marker date="1343598055000" expanded="true" signature="1496:1542" placeholder="{...}" />
-                <marker date="1343598055000" expanded="true" signature="1612:2047" placeholder="{...}" />
-                <marker date="1343598055000" expanded="true" signature="1767:1809" placeholder="..." />
-                <marker date="1343598055000" expanded="true" signature="1811:1977" placeholder="{...}" />
-                <marker date="1343598055000" expanded="true" signature="2110:2300" placeholder="{...}" />
-                <marker date="1343598055000" expanded="true" signature="2367:2454" placeholder="{...}" />
-                <marker date="1343598055000" expanded="true" signature="2520:2582" placeholder="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ApartmentData.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/data/ApartmentData.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="78" selection-start="2031" selection-end="2031" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#15#43#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -235,9 +242,7 @@
         <entry file="file://$PROJECT_DIR$/src/data/MainModel.as">
           <provider selected="true" editor-type-id="text-editor">
             <state line="34" column="42" selection-start="784" selection-end="784" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#15#40#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -252,7 +257,7 @@
       <file leaf-file-name="Dialog.mxml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lightboxGallery/Dialog.mxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="47" selection-start="386" selection-end="386" vertical-scroll-proportion="-2.7142856">
+            <state line="7" column="47" selection-start="386" selection-end="386" vertical-scroll-proportion="0.0">
               <folding>
                 <marker date="1343511884000" expanded="false" signature="431:528" placeholder="..." />
                 <marker date="1343511884000" expanded="true" signature="812:960" placeholder="{...}" />
@@ -275,9 +280,16 @@
       <file leaf-file-name="BitmapFactory.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/utils/BitmapFactory.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="47" selection-start="3252" selection-end="3252" vertical-scroll-proportion="0.0">
+            <state line="103" column="32" selection-start="3671" selection-end="3671" vertical-scroll-proportion="0.0">
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="toolTip.png" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/assets/step1/toolTip.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -300,13 +312,13 @@
       <file leaf-file-name="Stroika.mxml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Stroika.mxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="17" selection-start="883" selection-end="883" vertical-scroll-proportion="-8.678572">
+            <state line="28" column="18" selection-start="884" selection-end="884" vertical-scroll-proportion="-19.0">
               <folding>
-                <marker date="1343625908000" expanded="true" signature="428:832" placeholder="{...}" />
-                <marker date="1343625908000" expanded="true" signature="541:570" placeholder="/*...*/" />
-                <marker date="1343625908000" expanded="true" signature="603:752" placeholder="/*...*/" />
-                <marker date="1343625908000" expanded="true" signature="1686:1831" placeholder="..." />
-                <marker date="1343625908000" expanded="true" signature="1904:1916" placeholder="{...}" />
+                <marker date="1343777517000" expanded="true" signature="428:832" placeholder="{...}" />
+                <marker date="1343777517000" expanded="true" signature="541:570" placeholder="/*...*/" />
+                <marker date="1343777517000" expanded="true" signature="603:752" placeholder="/*...*/" />
+                <marker date="1343777517000" expanded="false" signature="1851:1996" placeholder="..." />
+                <marker date="1343777517000" expanded="true" signature="2069:2081" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -316,9 +328,7 @@
         <entry file="file://$PROJECT_DIR$/src/data/FloorData.as">
           <provider selected="true" editor-type-id="text-editor">
             <state line="27" column="0" selection-start="686" selection-end="686" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#15#43#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -327,9 +337,7 @@
         <entry file="file://$PROJECT_DIR$/src/data/CachedBitmaps.as">
           <provider selected="true" editor-type-id="text-editor">
             <state line="13" column="129" selection-start="338" selection-end="338" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#15#43#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -349,22 +357,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/data/BuildingData.as" />
-        <option value="$PROJECT_DIR$/src/data/FloorData.as" />
-        <option value="$PROJECT_DIR$/src/views/FloorSquare.mxml" />
-        <option value="$PROJECT_DIR$/src/lightboxGallery/Gallery.mxml" />
-        <option value="$PROJECT_DIR$/src/toolTips/ToolTipText.mxml" />
-        <option value="$PROJECT_DIR$/src/views/ApartmentSquare.mxml" />
-        <option value="$PROJECT_DIR$/src/toolTips/ToolTipData.as" />
-        <option value="$PROJECT_DIR$/src/toolTips/ToolTipFacade.mxml" />
-        <option value="$PROJECT_DIR$/src/views/Floor.mxml" />
         <option value="$PROJECT_DIR$/src/views/ApartmentSmall.mxml" />
         <option value="$PROJECT_DIR$/src/data/MainModel.as" />
-        <option value="$PROJECT_DIR$/src/Stroika.mxml" />
         <option value="$PROJECT_DIR$/src/views/BuildingSelectionView.mxml" />
         <option value="$PROJECT_DIR$/src/views/Building.mxml" />
+        <option value="$PROJECT_DIR$/src/toolTips/ToolTipStep1.mxml" />
         <option value="$PROJECT_DIR$/src/utils/BitmapFactory.as" />
+        <option value="$PROJECT_DIR$/src/views/ButtonsBar.mxml" />
+        <option value="$PROJECT_DIR$/src/Stroika.mxml" />
+        <option value="$PROJECT_DIR$/src/views/FloorSquare.mxml" />
+        <option value="$PROJECT_DIR$/src/views/ApartmentSquare.mxml" />
+        <option value="$PROJECT_DIR$/src/views/Step3.mxml" />
+        <option value="$PROJECT_DIR$/src/lightboxGallery/LightBox.mxml" />
         <option value="$PROJECT_DIR$/src/views/Step1.mxml" />
+        <option value="$PROJECT_DIR$/src/views/Floor.mxml" />
+        <option value="$PROJECT_DIR$/src/views/Step2.mxml" />
+        <option value="$PROJECT_DIR$/src/toolTips/ToolTipFacade.mxml" />
       </list>
     </option>
   </component>
@@ -399,7 +407,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -525,13 +532,14 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
@@ -563,13 +571,6 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="FlexRunConfigurationType" factoryName="Flex" browser_family="FIREFOX" debugger_sdk="Module SDK" html_or_swf_file_path="" launcher_type="OSDefault" main_class_name="" module_name="" player_path="/Applications/Flash Player Debugger.app" run_mode="HtmlOrSwfFile" run_trusted="true" url_to_launch="http://">
-      <method>
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -581,6 +582,13 @@
       <option name="VM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
+      <method>
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="FlexRunConfigurationType" factoryName="Flex" browser_family="FIREFOX" debugger_sdk="Module SDK" html_or_swf_file_path="" launcher_type="OSDefault" main_class_name="" module_name="" player_path="/Applications/Flash Player Debugger.app" run_mode="HtmlOrSwfFile" run_trusted="true" url_to_launch="http://">
       <method>
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
@@ -639,22 +647,22 @@
     <frame x="0" y="22" width="1920" height="1026" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975295" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975295" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32223415" sideWeight="0.95886755" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33082706" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.67776585" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16452992" sideWeight="0.96025777" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.039742213" sideWeight="0.9754273" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975295" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -712,83 +720,25 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/lightboxGallery/Gallery.mxml">
+    <entry file="file://$PROJECT_DIR$/src/utils/BitmapFactory.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="35" selection-start="4103" selection-end="4103" vertical-scroll-proportion="-65.82143">
-          <folding>
-            <marker date="1343594899000" expanded="false" signature="733:830" placeholder="..." />
-            <marker date="1343594899000" expanded="true" signature="1165:1366" placeholder="{...}" />
-            <marker date="1343594899000" expanded="true" signature="1411:3274" placeholder="{...}" />
-            <marker date="1343594899000" expanded="true" signature="1467:3201" placeholder="{...}" />
-            <marker date="1343594899000" expanded="true" signature="1590:1800" placeholder="{...}" />
-            <marker date="1343594899000" expanded="true" signature="1842:1921" placeholder="{...}" />
-            <marker date="1343594899000" expanded="true" signature="2150:3187" placeholder="{...}" />
-            <marker date="1343594899000" expanded="true" signature="3207:3264" placeholder="{...}" />
-            <marker date="1343594899000" expanded="true" signature="3334:3409" placeholder="{...}" />
-            <marker date="1343594899000" expanded="true" signature="3465:3773" placeholder="{...}" />
-            <marker date="1343594899000" expanded="true" signature="3823:4196" placeholder="{...}" />
-            <marker date="1343594899000" expanded="true" signature="3962:4186" placeholder="{...}" />
-            <marker date="1343594899000" expanded="true" signature="4009:4165" placeholder="{...}" />
-            <marker date="1343594899000" expanded="true" signature="4239:4435" placeholder="{...}" />
-            <marker date="1343594899000" expanded="true" signature="4478:4657" placeholder="{...}" />
-            <marker date="1343594899000" expanded="true" signature="4704:4934" placeholder="{...}" />
-            <marker date="1343594899000" expanded="true" signature="4750:4779" placeholder="..." />
-            <marker date="1343594899000" expanded="true" signature="4780:4924" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/ApartmentData.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="78" selection-start="2031" selection-end="2031" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#15#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/toolTips/ToolTipData.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="133" column="8" selection-start="3711" selection-end="4074" vertical-scroll-proportion="0.0">
+        <state line="103" column="32" selection-start="3671" selection-end="3671" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Floor.mxml">
+    <entry file="file://$PROJECT_DIR$/src/views/Building.mxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="53" selection-start="1111" selection-end="1111" vertical-scroll-proportion="-11.535714">
-          <folding>
-            <marker date="1343597999000" expanded="false" signature="1211:1401" placeholder="..." />
-            <marker date="1343597999000" expanded="true" signature="1757:1799" placeholder="{...}" />
-            <marker date="1343597999000" expanded="true" signature="1861:2038" placeholder="{...}" />
-            <marker date="1343597999000" expanded="true" signature="2091:2775" placeholder="{...}" />
-            <marker date="1343597999000" expanded="true" signature="2135:2149" placeholder="..." />
-            <marker date="1343597999000" expanded="true" signature="2153:2192" placeholder="..." />
-            <marker date="1343597999000" expanded="true" signature="2194:2765" placeholder="{...}" />
-            <marker date="1343597999000" expanded="true" signature="2417:2751" placeholder="{...}" />
-            <marker date="1343597999000" expanded="true" signature="2876:2943" placeholder="{...}" />
-            <marker date="1343597999000" expanded="true" signature="3010:3174" placeholder="{...}" />
-            <marker date="1343597999000" expanded="true" signature="3113:3164" placeholder="{...}" />
-            <marker date="1343597999000" expanded="true" signature="3240:3406" placeholder="{...}" />
-            <marker date="1343597999000" expanded="true" signature="3343:3396" placeholder="{...}" />
-          </folding>
+        <state line="7" column="0" selection-start="299" selection-end="299" vertical-scroll-proportion="-4.75">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/ApartmentSmall.mxml">
+    <entry file="file://$PROJECT_DIR$/src/views/ButtonsBar.mxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="47" selection-start="802" selection-end="802" vertical-scroll-proportion="-12.214286">
+        <state line="15" column="47" selection-start="755" selection-end="755" vertical-scroll-proportion="-4.071429">
           <folding>
-            <marker date="1343598055000" expanded="true" signature="533:838" placeholder="..." />
-            <marker date="1343598055000" expanded="true" signature="1126:1279" placeholder="{...}" />
-            <marker date="1343598055000" expanded="true" signature="1321:1436" placeholder="{...}" />
-            <marker date="1343598055000" expanded="true" signature="1496:1542" placeholder="{...}" />
-            <marker date="1343598055000" expanded="true" signature="1612:2047" placeholder="{...}" />
-            <marker date="1343598055000" expanded="true" signature="1767:1809" placeholder="..." />
-            <marker date="1343598055000" expanded="true" signature="1811:1977" placeholder="{...}" />
-            <marker date="1343598055000" expanded="true" signature="2110:2300" placeholder="{...}" />
-            <marker date="1343598055000" expanded="true" signature="2367:2454" placeholder="{...}" />
-            <marker date="1343598055000" expanded="true" signature="2520:2582" placeholder="{...}" />
+            <marker date="1343777157000" expanded="true" signature="2162:2242" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -800,121 +750,180 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Step3.mxml">
+    <entry file="file://$PROJECT_DIR$/src/views/ApartmentSmall.mxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="17" selection-start="175" selection-end="175" vertical-scroll-proportion="-1.3571428">
+        <state line="18" column="47" selection-start="802" selection-end="802" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1343493350000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/MainModel.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="42" selection-start="784" selection-end="784" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#15#40#0" expanded="true" />
+            <marker date="1343598055000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1343598055000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1343598055000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1343598055000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1343598055000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1343598055000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1343598055000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1343598055000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1343598055000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1343598055000" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/FloorSquare.mxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="113" selection-start="4519" selection-end="4519" vertical-scroll-proportion="-19.071428">
+        <state line="28" column="126" selection-start="3170" selection-end="3170" vertical-scroll-proportion="-19.0">
           <folding>
-            <marker date="1343594265000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1343594265000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1343594265000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1343594265000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1343594265000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1343594265000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1343594265000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1343594265000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1343594265000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1343594265000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1343594265000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1343594265000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1343594265000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1343594265000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1343594265000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1343594265000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Stroika.mxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="17" selection-start="883" selection-end="883" vertical-scroll-proportion="-8.678572">
-          <folding>
-            <marker date="1343625908000" expanded="true" signature="428:832" placeholder="{...}" />
-            <marker date="1343625908000" expanded="true" signature="541:570" placeholder="/*...*/" />
-            <marker date="1343625908000" expanded="true" signature="603:752" placeholder="/*...*/" />
-            <marker date="1343625908000" expanded="true" signature="1686:1831" placeholder="..." />
-            <marker date="1343625908000" expanded="true" signature="1904:1916" placeholder="{...}" />
+            <marker date="1343778389000" expanded="false" signature="3373:3678" placeholder="..." />
+            <marker date="1343778389000" expanded="true" signature="4061:4329" placeholder="{...}" />
+            <marker date="1343778389000" expanded="true" signature="4392:5090" placeholder="{...}" />
+            <marker date="1343778389000" expanded="true" signature="4680:4913" placeholder="{...}" />
+            <marker date="1343778389000" expanded="true" signature="4751:4899" placeholder="{...}" />
+            <marker date="1343778389000" expanded="true" signature="5151:6101" placeholder="{...}" />
+            <marker date="1343778389000" expanded="true" signature="5188:6091" placeholder="{...}" />
+            <marker date="1343778389000" expanded="true" signature="6166:6246" placeholder="{...}" />
+            <marker date="1343778389000" expanded="true" signature="6313:6606" placeholder="{...}" />
+            <marker date="1343778389000" expanded="true" signature="6672:6967" placeholder="{...}" />
+            <marker date="1343778389000" expanded="true" signature="7022:7067" placeholder="{...}" />
+            <marker date="1343778389000" expanded="true" signature="7132:7250" placeholder="{...}" />
+            <marker date="1343778389000" expanded="true" signature="7291:7860" placeholder="{...}" />
+            <marker date="1343778389000" expanded="true" signature="7493:7850" placeholder="{...}" />
+            <marker date="1343778389000" expanded="true" signature="7907:8108" placeholder="{...}" />
+            <marker date="1343778389000" expanded="true" signature="7963:8098" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/ApartmentSquare.mxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="9" selection-start="2102" selection-end="2102" vertical-scroll-proportion="-6.321429">
+        <state line="3" column="37" selection-start="292" selection-end="292" vertical-scroll-proportion="-2.0357144">
           <folding>
-            <marker date="1343595762000" expanded="false" signature="2272:2370" placeholder="..." />
-            <marker date="1343595762000" expanded="true" signature="2484:2682" placeholder="{...}" />
-            <marker date="1343595762000" expanded="true" signature="2538:2672" placeholder="{...}" />
+            <marker date="1343778536000" expanded="false" signature="2320:2418" placeholder="..." />
+            <marker date="1343778536000" expanded="true" signature="2532:2730" placeholder="{...}" />
+            <marker date="1343778536000" expanded="true" signature="2586:2720" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/BitmapFactory.as">
+    <entry file="file://$PROJECT_DIR$/src/views/Step3.mxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="47" selection-start="3252" selection-end="3252" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Building.mxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="111" selection-start="213" selection-end="213" vertical-scroll-proportion="-1.3571428">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/FloorSquareApartmentView.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="24" selection-start="2685" selection-end="2685" vertical-scroll-proportion="0.0">
+        <state line="8" column="60" selection-start="457" selection-end="457" vertical-scroll-proportion="-5.428571">
           <folding>
-            <element signature="e#16#42#0" expanded="true" />
+            <marker date="1343778536000" expanded="false" signature="498:606" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/toolTips/ToolTipFacade.mxml">
+    <entry file="file://$PROJECT_DIR$/src/data/ApartmentData.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="80" selection-start="1801" selection-end="1801" vertical-scroll-proportion="-0.6785714">
+        <state line="66" column="78" selection-start="2031" selection-end="2031" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lightboxGallery/LightBox.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="47" selection-start="1780" selection-end="1780" vertical-scroll-proportion="-4.071429">
           <folding>
-            <marker date="1343597833000" expanded="true" signature="874:1004" placeholder="..." />
-            <marker date="1343597833000" expanded="true" signature="1136:1283" placeholder="{...}" />
-            <marker date="1343597833000" expanded="true" signature="1361:1487" placeholder="{...}" />
-            <marker date="1343597833000" expanded="true" signature="1397:1475" placeholder="{...}" />
-            <marker date="1343597833000" expanded="true" signature="1550:2065" placeholder="{...}" />
-            <marker date="1343597833000" expanded="true" signature="1946:1975" placeholder="..." />
-            <marker date="1343597833000" expanded="true" signature="2243:2344" placeholder="{...}" />
+            <marker date="1343778653000" expanded="false" signature="1883:2062" placeholder="..." />
+            <marker date="1343778653000" expanded="true" signature="2164:2697" placeholder="{...}" />
+            <marker date="1343778653000" expanded="true" signature="2409:2471" placeholder="{...}" />
+            <marker date="1343778653000" expanded="true" signature="2524:2604" placeholder="{...}" />
+            <marker date="1343778653000" expanded="true" signature="2756:2906" placeholder="{...}" />
+            <marker date="1343778653000" expanded="true" signature="2948:2989" placeholder="{...}" />
+            <marker date="1343778653000" expanded="true" signature="3031:3443" placeholder="{...}" />
+            <marker date="1343778653000" expanded="true" signature="3049:3344" placeholder="{...}" />
+            <marker date="1343778653000" expanded="true" signature="3161:3330" placeholder="{...}" />
+            <marker date="1343778653000" expanded="true" signature="3365:3408" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Stroika.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="18" selection-start="884" selection-end="884" vertical-scroll-proportion="-19.0">
+          <folding>
+            <marker date="1343777517000" expanded="true" signature="428:832" placeholder="{...}" />
+            <marker date="1343777517000" expanded="true" signature="541:570" placeholder="/*...*/" />
+            <marker date="1343777517000" expanded="true" signature="603:752" placeholder="/*...*/" />
+            <marker date="1343777517000" expanded="false" signature="1851:1996" placeholder="..." />
+            <marker date="1343777517000" expanded="true" signature="2069:2081" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/Step1.mxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="39" selection-start="3755" selection-end="3755" vertical-scroll-proportion="0.6785714">
+        <state line="13" column="117" selection-start="849" selection-end="849" vertical-scroll-proportion="-8.821428">
           <folding>
-            <marker date="1343627547000" expanded="false" signature="2217:2310" placeholder="..." />
-            <marker date="1343627547000" expanded="true" signature="2723:2779" placeholder="{...}" />
-            <marker date="1343627547000" expanded="true" signature="2840:2985" placeholder="{...}" />
-            <marker date="1343627547000" expanded="true" signature="2854:2975" placeholder="//..." />
-            <marker date="1343627547000" expanded="true" signature="3058:3070" placeholder="{...}" />
-            <marker date="1343627547000" expanded="true" signature="3138:3608" placeholder="{...}" />
-            <marker date="1343627547000" expanded="true" signature="3675:3765" placeholder="{...}" />
+            <marker date="1343778890000" expanded="true" signature="3606:3833" placeholder="..." />
+            <marker date="1343778890000" expanded="true" signature="4164:4220" placeholder="{...}" />
+            <marker date="1343778890000" expanded="true" signature="4281:4426" placeholder="{...}" />
+            <marker date="1343778890000" expanded="true" signature="4295:4416" placeholder="//..." />
+            <marker date="1343778890000" expanded="true" signature="4499:4511" placeholder="{...}" />
+            <marker date="1343778890000" expanded="true" signature="4579:5170" placeholder="{...}" />
+            <marker date="1343778890000" expanded="true" signature="5237:5377" placeholder="{...}" />
+            <marker date="1343778890000" expanded="true" signature="5448:5579" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Floor.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="70" selection-start="1690" selection-end="1690" vertical-scroll-proportion="-9.5">
+          <folding>
+            <marker date="1343778969000" expanded="false" signature="1211:1401" placeholder="..." />
+            <marker date="1343778969000" expanded="true" signature="1757:1799" placeholder="{...}" />
+            <marker date="1343778969000" expanded="true" signature="1861:2038" placeholder="{...}" />
+            <marker date="1343778969000" expanded="true" signature="2091:2777" placeholder="{...}" />
+            <marker date="1343778969000" expanded="true" signature="2135:2149" placeholder="..." />
+            <marker date="1343778969000" expanded="true" signature="2153:2194" placeholder="..." />
+            <marker date="1343778969000" expanded="true" signature="2196:2767" placeholder="{...}" />
+            <marker date="1343778969000" expanded="true" signature="2419:2753" placeholder="{...}" />
+            <marker date="1343778969000" expanded="true" signature="2878:2945" placeholder="{...}" />
+            <marker date="1343778969000" expanded="true" signature="3012:3176" placeholder="{...}" />
+            <marker date="1343778969000" expanded="true" signature="3115:3166" placeholder="{...}" />
+            <marker date="1343778969000" expanded="true" signature="3242:3408" placeholder="{...}" />
+            <marker date="1343778969000" expanded="true" signature="3345:3398" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Step2.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="96" selection-start="672" selection-end="672" vertical-scroll-proportion="-7.464286">
+          <folding>
+            <marker date="1343779036000" expanded="false" signature="423:671" placeholder="..." />
+            <marker date="1343779036000" expanded="true" signature="837:914" placeholder="{...}" />
+            <marker date="1343779036000" expanded="true" signature="982:1138" placeholder="{...}" />
+            <marker date="1343779036000" expanded="true" signature="1193:2184" placeholder="{...}" />
+            <marker date="1343779036000" expanded="true" signature="1682:1836" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/toolTips/ToolTipStep1.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="59" selection-start="651" selection-end="651" vertical-scroll-proportion="-8.821428">
+          <folding>
+            <marker date="1343772192000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1343772192000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1343772192000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1343772192000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1343772192000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/toolTips/ToolTipFacade.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="14" selection-start="1863" selection-end="1863" vertical-scroll-proportion="0.55813956">
+          <folding>
+            <marker date="1343779133000" expanded="false" signature="874:1004" placeholder="..." />
+            <marker date="1343779133000" expanded="true" signature="1136:1283" placeholder="{...}" />
+            <marker date="1343779133000" expanded="true" signature="1361:1487" placeholder="{...}" />
+            <marker date="1343779133000" expanded="true" signature="1397:1475" placeholder="{...}" />
+            <marker date="1343779133000" expanded="true" signature="1550:2069" placeholder="{...}" />
+            <marker date="1343779133000" expanded="true" signature="1861:2005" placeholder="//..." />
+            <marker date="1343779133000" expanded="true" signature="2247:2348" placeholder="{...}" />
           </folding>
         </state>
       </provider>

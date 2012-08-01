@@ -5,6 +5,8 @@
 
         [Bindable]
         public var maskImage:Bitmap;
+
+        public var index:int;
         
         ]]></fx:Script>
 </s:Group>
