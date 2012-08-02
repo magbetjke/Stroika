@@ -101,39 +101,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ToolTipStep1.mxml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/toolTips/ToolTipStep1.mxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="27" selection-start="1034" selection-end="1034" vertical-scroll-proportion="-10.178572">
-              <folding>
-                <marker date="1343853511000" expanded="true" signature="522:650" placeholder="{...}" />
-                <marker date="1343853511000" expanded="true" signature="728:854" placeholder="{...}" />
-                <marker date="1343853511000" expanded="true" signature="764:842" placeholder="{...}" />
-                <marker date="1343853511000" expanded="true" signature="917:1098" placeholder="{...}" />
-                <marker date="1343853511000" expanded="true" signature="1274:1374" placeholder="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Step1.mxml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/views/Step1.mxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="34" selection-start="2968" selection-end="2968" vertical-scroll-proportion="0.905">
+            <state line="105" column="76" selection-start="4681" selection-end="4681" vertical-scroll-proportion="0.615">
               <folding>
-                <marker date="1343855899000" expanded="false" signature="4069:4343" placeholder="..." />
-                <marker date="1343855899000" expanded="true" signature="4733:4789" placeholder="{...}" />
-                <marker date="1343855899000" expanded="true" signature="4850:4995" placeholder="{...}" />
-                <marker date="1343855899000" expanded="true" signature="4864:4985" placeholder="//..." />
-                <marker date="1343855899000" expanded="true" signature="5068:5300" placeholder="{...}" />
-                <marker date="1343855899000" expanded="true" signature="5379:5425" placeholder="{...}" />
-                <marker date="1343855899000" expanded="true" signature="5493:5615" placeholder="{...}" />
-                <marker date="1343855899000" expanded="true" signature="5681:6770" placeholder="{...}" />
-                <marker date="1343855899000" expanded="true" signature="5808:5920" placeholder="{...}" />
-                <marker date="1343855899000" expanded="true" signature="5981:6747" placeholder="{...}" />
-                <marker date="1343855899000" expanded="true" signature="6027:6733" placeholder="{...}" />
-                <marker date="1343855899000" expanded="true" signature="6837:6995" placeholder="{...}" />
-                <marker date="1343855899000" expanded="true" signature="7066:7255" placeholder="{...}" />
+                <marker date="1343885445000" expanded="false" signature="4069:4343" placeholder="..." />
+                <marker date="1343885445000" expanded="true" signature="4843:4899" placeholder="{...}" />
+                <marker date="1343885445000" expanded="true" signature="4960:5105" placeholder="{...}" />
+                <marker date="1343885445000" expanded="true" signature="4974:5095" placeholder="//..." />
+                <marker date="1343885445000" expanded="true" signature="5178:5410" placeholder="{...}" />
+                <marker date="1343885445000" expanded="true" signature="5489:5535" placeholder="{...}" />
+                <marker date="1343885445000" expanded="true" signature="5603:5725" placeholder="{...}" />
+                <marker date="1343885445000" expanded="true" signature="5791:6880" placeholder="{...}" />
+                <marker date="1343885445000" expanded="true" signature="5918:6030" placeholder="{...}" />
+                <marker date="1343885445000" expanded="true" signature="6091:6857" placeholder="{...}" />
+                <marker date="1343885445000" expanded="true" signature="6137:6843" placeholder="{...}" />
+                <marker date="1343885445000" expanded="true" signature="6947:7105" placeholder="{...}" />
+                <marker date="1343885445000" expanded="true" signature="7176:7365" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -258,6 +243,15 @@
         <entry file="file://$PROJECT_DIR$/src/utils/BitmapFactory.as">
           <provider selected="true" editor-type-id="text-editor">
             <state line="103" column="36" selection-start="3674" selection-end="3674" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Assets.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/utils/Assets.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -697,44 +691,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/toolTips/ToolTipStep1.mxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="27" selection-start="1034" selection-end="1034" vertical-scroll-proportion="-10.178572">
-          <folding>
-            <marker date="1343853511000" expanded="true" signature="522:650" placeholder="{...}" />
-            <marker date="1343853511000" expanded="true" signature="728:854" placeholder="{...}" />
-            <marker date="1343853511000" expanded="true" signature="764:842" placeholder="{...}" />
-            <marker date="1343853511000" expanded="true" signature="917:1098" placeholder="{...}" />
-            <marker date="1343853511000" expanded="true" signature="1274:1374" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lightboxGallery/LightBox.mxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="47" selection-start="1780" selection-end="1780" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1343778653000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1343778653000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1343778653000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1343778653000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1343778653000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1343778653000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1343778653000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1343778653000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1343778653000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1343778653000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/MainModel.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="45" selection-start="847" selection-end="847" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Stroika.mxml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="18" selection-start="884" selection-end="884" vertical-scroll-proportion="-6.607143">
@@ -877,23 +833,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/toolTips/ToolTipStep1.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="27" selection-start="1034" selection-end="1034" vertical-scroll-proportion="-10.178572">
+          <folding>
+            <marker date="1343853511000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1343853511000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1343853511000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1343853511000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1343853511000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/Assets.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/BitmapFactory.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="103" column="36" selection-start="3674" selection-end="3674" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/Step1.mxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="34" selection-start="2968" selection-end="2968" vertical-scroll-proportion="0.905">
+        <state line="105" column="76" selection-start="4681" selection-end="4681" vertical-scroll-proportion="0.615">
           <folding>
-            <marker date="1343855899000" expanded="false" signature="4069:4343" placeholder="..." />
-            <marker date="1343855899000" expanded="true" signature="4733:4789" placeholder="{...}" />
-            <marker date="1343855899000" expanded="true" signature="4850:4995" placeholder="{...}" />
-            <marker date="1343855899000" expanded="true" signature="4864:4985" placeholder="//..." />
-            <marker date="1343855899000" expanded="true" signature="5068:5300" placeholder="{...}" />
-            <marker date="1343855899000" expanded="true" signature="5379:5425" placeholder="{...}" />
-            <marker date="1343855899000" expanded="true" signature="5493:5615" placeholder="{...}" />
-            <marker date="1343855899000" expanded="true" signature="5681:6770" placeholder="{...}" />
-            <marker date="1343855899000" expanded="true" signature="5808:5920" placeholder="{...}" />
-            <marker date="1343855899000" expanded="true" signature="5981:6747" placeholder="{...}" />
-            <marker date="1343855899000" expanded="true" signature="6027:6733" placeholder="{...}" />
-            <marker date="1343855899000" expanded="true" signature="6837:6995" placeholder="{...}" />
-            <marker date="1343855899000" expanded="true" signature="7066:7255" placeholder="{...}" />
+            <marker date="1343885445000" expanded="false" signature="4069:4343" placeholder="..." />
+            <marker date="1343885445000" expanded="true" signature="4843:4899" placeholder="{...}" />
+            <marker date="1343885445000" expanded="true" signature="4960:5105" placeholder="{...}" />
+            <marker date="1343885445000" expanded="true" signature="4974:5095" placeholder="//..." />
+            <marker date="1343885445000" expanded="true" signature="5178:5410" placeholder="{...}" />
+            <marker date="1343885445000" expanded="true" signature="5489:5535" placeholder="{...}" />
+            <marker date="1343885445000" expanded="true" signature="5603:5725" placeholder="{...}" />
+            <marker date="1343885445000" expanded="true" signature="5791:6880" placeholder="{...}" />
+            <marker date="1343885445000" expanded="true" signature="5918:6030" placeholder="{...}" />
+            <marker date="1343885445000" expanded="true" signature="6091:6857" placeholder="{...}" />
+            <marker date="1343885445000" expanded="true" signature="6137:6843" placeholder="{...}" />
+            <marker date="1343885445000" expanded="true" signature="6947:7105" placeholder="{...}" />
+            <marker date="1343885445000" expanded="true" signature="7176:7365" placeholder="{...}" />
           </folding>
         </state>
       </provider>

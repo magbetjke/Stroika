@@ -95,10 +95,12 @@
 
         import utils.BitmapFactory;
 
-        [Embed(source="/assets/1.jpg")]
+        //[Embed(source="/assets/1.jpg")]
+        [Embed(source="/assets/1_result.jpg")]
         private var _background:Class;
 
-        [Embed(source="/assets/buildingsBlur.png")]
+        //[Embed(source="/assets/buildingsBlur.png")]
+        [Embed(source="/assets/buildingsBlur_result.jpg")]
         private var _backgroundBlur:Class;
 
         [Embed(source="/assets/buildingMask.png")]
