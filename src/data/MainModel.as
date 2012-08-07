@@ -36,6 +36,8 @@ public class MainModel {
 
     [Bindable]
     public var selectedBuildingIndex:int = 0;
+
+    public static const XML_URL:String = 'assets/data.xml';
 }
 }
 

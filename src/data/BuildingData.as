@@ -9,6 +9,8 @@ public class BuildingData {
     public var floors:Vector.<FloorData> = new <FloorData>[];
 
     public function BuildingData():void {
+        buildingType = BuildingData.TYPE_23;
+
         for (var i:int = 19; i > 2; i--) {
             var floorData:FloorData = new FloorData();
             floorData.floorNumber = i;

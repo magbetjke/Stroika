@@ -63,9 +63,14 @@
             floor = new Floor();
             floor.floorData = floorData;
             floorFacade.addElement(floor);
-            if (_dataProvider.buildingType == BuildingData.TYPE_23)
+            if (_dataProvider.buildingType == BuildingData.TYPE_23){
+                floorData = new FloorData();
+                floorData.type = FloorType.TECH_FLOOR;
+                floor = new Floor();
+                floor.floorData = floorData;
                 floorFacade.addElement(floor);
-            
+            }
+
         }
         ]]></mx:Script>
 </mx:Canvas>

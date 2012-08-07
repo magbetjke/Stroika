@@ -32,7 +32,7 @@ public class BitmapFactory {
 
     [Embed(source="/assets/common/zoom.png")]
     private static var Zoom:Class;
-    [Embed(source="/assets/common/roza.png")]
+    [Embed(source="/assets/common/roza2.png")]
     private static var Roza:Class;
     [Embed(source="/assets/common/toolTipFacade.png")]
     private static var ToolTipFacade:Class;

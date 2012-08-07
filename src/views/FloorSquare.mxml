@@ -15,18 +15,18 @@
                                     x="10" y="42"
                                     mouseOver="mouseOverElement(event)" mouseOut="mouseOutElement(event)"
                                     cacheAsBitmap="true"/>
-    <views:FloorSquareApartmentView id="ap2" alpha="0" buttonMode="true" width="195" height="194" click="clickElement(event)" x="158" y="37" cacheAsBitmap="true" mouseOver="mouseOverElement(event)" mouseOut="mouseOutElement(event)"/>
+    <views:FloorSquareApartmentView id="ap2" alpha="0" buttonMode="true" width="195" height="194" click="clickElement(event)" x="115" y="37" flagRight="40" cacheAsBitmap="true" mouseOver="mouseOverElement(event)" mouseOut="mouseOutElement(event)"/>
     <views:FloorSquareApartmentView id="ap3" alpha="0" buttonMode="true" width="202" height="202" click="clickElement(event)" x="286" y="43" cacheAsBitmap="true" mouseOver="mouseOverElement(event)" mouseOut="mouseOutElement(event)"/>
     <views:FloorSquareApartmentView id="ap4" alpha="0" buttonMode="true" width="125" height="125" click="clickElement(event)" x="375" y="188" cacheAsBitmap="true" mouseOver="mouseOverElement(event)" mouseOut="mouseOutElement(event)"/>
     <views:FloorSquareApartmentView id="ap5" alpha="0" buttonMode="true" width="192" height="192" click="clickElement(event)" x="340" y="273" cacheAsBitmap="true" mouseOver="mouseOverElement(event)" mouseOut="mouseOutElement(event)"/>
     <views:FloorSquareApartmentView id="ap6" alpha="0" buttonMode="true" width="181" height="182" click="clickElement(event)" x="283" y="273" cacheAsBitmap="true" mouseOver="mouseOverElement(event)" mouseOut="mouseOutElement(event)"/>
     <views:FloorSquareApartmentView id="ap7" alpha="0" buttonMode="true" width="179" height="179" click="clickElement(event)" x="213" y="273" cacheAsBitmap="true" mouseOver="mouseOverElement(event)" mouseOut="mouseOutElement(event)"/>
-    <views:FloorSquareApartmentView id="ap8" alpha="0" buttonMode="true" width="178" height="178" click="clickElement(event)" x="156" y="273" cacheAsBitmap="true" mouseOver="mouseOverElement(event)" mouseOut="mouseOutElement(event)"/>
+    <views:FloorSquareApartmentView id="ap8" alpha="0" buttonMode="true" width="178" height="178" click="clickElement(event)" x="118" y="273" flagRight="40" cacheAsBitmap="true" mouseOver="mouseOverElement(event)" mouseOut="mouseOutElement(event)"/>
     <views:FloorSquareApartmentView id="ap9" alpha="0" buttonMode="true" width="189" height="189" click="clickElement(event)" x="0" y="273" cacheAsBitmap="true" mouseOver="mouseOverElement(event)" mouseOut="mouseOutElement(event)"/>
     <views:FloorSquareApartmentView id="ap10" alpha="0" buttonMode="true" width="125" height="125" click="clickElement(event)" x="0" y="188" cacheAsBitmap="true" mouseOver="mouseOverElement(event)" mouseOut="mouseOutElement(event)"/>
 
 
-    <s:Image id="zoomBtn" source="{BitmapFactory.getBitmap('zoom')}" alpha=".7" scaleMode="letterbox" scaleX="1.4" scaleY="1.4"
+    <s:Image id="zoomBtn" source="{BitmapFactory.getBitmap('zoom')}" alpha=".7" scaleMode="letterbox" scaleX="1.7" scaleY="1.7"
              width="26" height="26" right="30" bottom="30" mouseOver="{zoomBtn.alpha = 1}" mouseOut="{zoomBtn.alpha = .7}"
              click="openLightBox()"/>
     <fx:Script><![CDATA[

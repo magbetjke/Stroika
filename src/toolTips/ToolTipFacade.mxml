@@ -5,14 +5,14 @@
                       verticalScrollPolicy="off"
                       horizontalScrollPolicy="off" xmlns:tooltips="toolTips.*"
         >
-    <mx:Canvas width="100%" height="100%">
-        <mx:Image id="background" source="{BitmapFactory.getBitmap('toolTipFacade')}"/>
-        <mx:HBox x="10" y="10" horizontalGap="0">
+    <mx:Canvas width="100%" height="100%" clipContent="false">
+        <mx:Image id="background" source="{BitmapFactory.getBitmap('toolTipFacade')}"  scaleY="{_isOutOfBorder ? -1 : 1}"/>
+        <mx:HBox id="squareBox" y="{_isOutOfBorder ? -50 : 10}" x="10" horizontalGap="0">
 
             <mx:Label text="Площадь: "/>
             <mx:Label text="{_apartmentData ? _apartmentData.square.toString() + ' м&#0178;' : ''}"/>
         </mx:HBox>
-        <mx:HBox x="10" y="30" horizontalGap="0">
+        <mx:HBox id="priceBox" x="10" y="{_isOutOfBorder ? -30 : 30}" horizontalGap="0">
             <mx:Label text="Цена: "/>
             <mx:Label text="{_apartmentData ? _apartmentData.price.toString() + ' руб.' : ''}"/>
         </mx:HBox>
@@ -28,6 +28,9 @@
 
         [Bindable]
         private var _apartmentData:ApartmentData;
+        
+        [Bindable]
+        private var _isOutOfBorder:Boolean;
 
         override protected function commitProperties():void {
             super.commitProperties();
@@ -51,9 +54,10 @@
             var targetPoint:Point = target.parent.localToGlobal(new Point(target.x, target.y));
             var p:Point = new Point(targetPoint.x, targetPoint.y + target.height);
 
-            trace(app.mouseX,  app.mouseY);
-            //p.x = Math.min(app.width - width, p.x);
-            //if (p.y + height > app.height && (p.y - height - offset.y > 0))p.y -= height + offset.y;
+            _isOutOfBorder =  p.y + height > app.height;
+            
+            if (_isOutOfBorder)
+                p.y -= target.height;
 
             this.x = p.x;
             this.y = p.y;

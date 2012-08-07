@@ -28,11 +28,12 @@ public class FloorSquareApartmentView extends UIComponent {
     private var _stroke:DropShadowFilter = new DropShadowFilter(0, 0, 0x000000, .6, 2, 2, 10, 1, true);
 
     private var _dataProvider:ApartmentData;
+
+    public var flagRight:int = 0;
     
     public static const NORMAL:String = 'normal';
     public static const OVER:String = 'over';
     public static const SELECTED:String = 'selected';
-    //public static const NOT_SELECTED:String = 'unselected';
 
     public function FloorSquareApartmentView():void {
     }
@@ -42,6 +43,8 @@ public class FloorSquareApartmentView extends UIComponent {
 
         _bitmap = value;
         if (_bitmap){
+            _bitmap.width = _bitmap.bitmapData.width;
+            _bitmap.height = _bitmap.bitmapData.height;
             _hitArea = BitmapUtil.createHitArea(_bitmap.bitmapData);
             updateChildren();
         }
@@ -62,18 +65,20 @@ public class FloorSquareApartmentView extends UIComponent {
         _selectedArea.visible = false;
         _selectedArea.cacheAsBitmap = true;
         _selectedArea.smoothing = true;
+        _selectedArea.scaleX = _selectedArea.scaleY = 1.7;
         _selectedArea.alpha = .5;
         addChild(_selectedArea);
-        
-        _selectionFlag.x = (_bitmap.width - _selectionFlag.width + 18) >> 1;
+
+        _selectionFlag.scaleX = _selectionFlag.scaleY = 1.7;
+        _selectionFlag.x = flagRight ? _bitmap.width - flagRight : (_bitmap.width - _selectionFlag.width + 18) >> 1;
         _selectionFlag.y = (_bitmap.height - _selectionFlag.height) >> 1;
-        _selectionFlag.visible = false;
+        _selectionFlag.visible = _state == SELECTED;
         _selectedArea.filters = [_stroke];
         addChild(_selectionFlag);
 
         _selectedArea.mask = _bitmap;
         _selectedArea.visible = true;
-        
+
     }
     
     private function scaleChildren():void {
@@ -81,6 +86,7 @@ public class FloorSquareApartmentView extends UIComponent {
             var scaleX:Number = width > 0 ? width / _bitmap.width : 1;
             var scaleY:Number = height > 0 ? height / _bitmap.height : 1;
             var resultScale:Number = Math.min(scaleX, scaleY);
+            
             _bitmap.scaleX = resultScale;
             _bitmap.scaleY = resultScale;
 
@@ -88,30 +94,14 @@ public class FloorSquareApartmentView extends UIComponent {
             _hitArea.scaleY = resultScale;
         }
     }
-    
+
+
     public function set state(state:String):void {
         if (_state == state) return;
 
         _state = state;
 
         _selectionFlag.visible = _state == SELECTED;
-        
-/*         switch (_state){
-             case NORMAL:
-                 _selectedArea.mask = null;
-                 _selectedArea.visible = false;
-                 _selectionFlag.visible = false;
-                 break;
-             case OVER:
-                 _selectedArea.mask = _bitmap;
-                 _selectedArea.visible = true;
-                 break;
-             case SELECTED:
-                 _selectedArea.mask = _bitmap;
-                 _selectedArea.visible = true;
-                 _selectionFlag.visible = true;
-                 break;
-         }*/
     }
 
     public function get state():String {

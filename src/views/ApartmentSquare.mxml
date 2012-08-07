@@ -3,9 +3,12 @@
          horizontalScrollPolicy="off" verticalScrollPolicy="off" clipContent="false" horizontalGap="20" paddingTop="20">
     <mx:Canvas width="280" height="310" verticalScrollPolicy="off" clipContent="false">
 
-        <s:Image id="apartmentImage" width="100%" height="100%" scaleMode="letterbox" smooth="true" source="{dataProvider ? dataProvider.bitmap : null}"/>
+        <s:Image id="apartmentImage" width="90%" height="100%" left="10" scaleMode="letterbox" smooth="true" source="{dataProvider ? dataProvider.bitmap : null}"/>
 
-        <!--<s:Image id="roza" width="50" height="5" scaleMode="letterbox" source="{BitmapFactory.getBitmap('roza')}" bottom="{-roza.height}" smooth="true"/>-->
+        <s:Image id="roza" width="50"
+                 scaleMode="letterbox"
+                 source="{BitmapFactory.getBitmap('roza')}"
+                 bottom="0" smooth="true"/>
         <s:Image id="zoomBtn" source="{BitmapFactory.getBitmap('zoom')}" alpha=".7"
                  width="26" height="26" right="0" bottom="0" mouseOver="{zoomBtn.alpha = 1}" mouseOut="{zoomBtn.alpha = .7}"
                  click="openLightBox()"/>

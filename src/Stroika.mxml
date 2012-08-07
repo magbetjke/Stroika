@@ -42,6 +42,8 @@
                      visible="{MainModel.instance.state == States.STEP3}" includeInLayout="{MainModel.instance.state == States.STEP3}"/>
     </s:VGroup>
     <fx:Script><![CDATA[
+        import controllers.MainController;
+
         import data.BuildingData;
         import data.FloorData;
         import data.MainModel;
@@ -50,7 +52,7 @@
         import mx.events.FlexEvent;
 
         private function creationCompleteHandler(event:FlexEvent):void {
-
+             MainController.instance.init(MainModel.XML_URL);
         }
         ]]></fx:Script>
 </s:Application>

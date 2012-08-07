@@ -2,6 +2,7 @@ package data {
 import flash.display.Bitmap;
 
 import utils.IBitmapFactory;
+import utils.Type145Factory;
 import utils.Type23Factory;
 
 public class FloorData {
@@ -65,7 +66,7 @@ public class FloorData {
         var factory:IBitmapFactory;
 
         if (_buildingType == BuildingData.TYPE_145) {
-            //not yet
+            factory = Type145Factory.instance;
         } else if (_buildingType == BuildingData.TYPE_23) {
             factory = Type23Factory.instance;
         } else {

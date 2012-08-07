@@ -1,9 +1,19 @@
 <?xml version="1.0"?>
 <mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:s="spark.components.*" xmlns:views="views.*">
 
-    <views:ButtonsBar  top="10" left="20" state="{States.STEP3}"/>
+    <views:ButtonsBar  top="20" left="20" state="{States.STEP3}"/>
 
-    <views:FloorSquare  dataProvider="{dataProvider}" scaleX=".7" scaleY=".7" top="50" left="20"/>
+    <mx:HBox verticalAlign="middle" top="50" left="20" horizontalGap="70">
+        <s:Image id="roza" width="50"
+                 scaleMode="letterbox"
+                 source="{BitmapFactory.getBitmap('roza')}"
+                 bottom="0" smooth="true"/>
+        <s:Label text="{dataProvider ? dataProvider.floorNumber + ' ЭТАЖ' : ''}" fontSize="18"/>
+
+    </mx:HBox>
+
+
+    <views:FloorSquare  dataProvider="{dataProvider}" scaleX=".6" scaleY=".6" top="90" left="20"/>
 
     <views:ApartmentSquare id="apSquare" dataProvider="{MainModel.instance.selectedApartment}" width="300" height="300" top="50" right="{apSquare.width + 10}"/>
 
@@ -12,6 +22,8 @@
         import data.FloorData;
         import data.MainModel;
         import data.States;
+
+        import utils.BitmapFactory;
 
         [Bindable]
         public var dataProvider:FloorData;
