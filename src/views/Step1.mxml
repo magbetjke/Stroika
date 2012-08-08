@@ -3,7 +3,9 @@
          xmlns:mx="library://ns.adobe.com/flex/mx"
          creationComplete="creationCompleteHandler(event)">
     <views:ButtonsBar top="10" left="20" state="{States.STEP1}"/>
-    <views:BuildingsFromTop width="380" height="300" top="30"/>
+
+    <mx:Label top="50" left="20" text="(Выберите строение на схеме или изображении)"/>
+    <views:BuildingsFromTop width="380" height="300" top="50"/>
     <mx:Canvas width="611" height="408" verticalScrollPolicy="off" horizontalScrollPolicy="off" right="0">
 
         <views:Building id="building1"

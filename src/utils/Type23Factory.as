@@ -38,7 +38,7 @@ public class Type23Factory implements IBitmapFactory {
 
     [Embed(source="/assets/floorSquare/type1/floorPlan.png")]
     private static var floorPlan:Class;
-    [Embed(source="/assets/floorSquare/type1/topFloorPlan.png")]
+    [Embed(source="/assets/floorSquare/type1/topFloorPlan_result.jpg")]
     private static var topFloorPlan:Class;
 
     public static const instance:Type23Factory = new Type23Factory();

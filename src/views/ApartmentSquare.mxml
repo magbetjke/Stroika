@@ -1,46 +1,49 @@
 <?xml version="1.0"?>
 <mx:HBox xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:s="spark.components.*" xmlns:comps="lightboxGallery.*"
          horizontalScrollPolicy="off" verticalScrollPolicy="off" clipContent="false" horizontalGap="20" paddingTop="20">
-    <mx:Canvas width="280" height="310" verticalScrollPolicy="off" clipContent="false">
-
-        <s:Image id="apartmentImage" width="90%" height="100%" left="10" scaleMode="letterbox" smooth="true" source="{dataProvider ? dataProvider.bitmap : null}"/>
+    <mx:Canvas width="265" height="330" verticalScrollPolicy="off" clipContent="false">
+        <s:Image id="apartmentImage" width="230" height="300" left="15" top="10" scaleMode="letterbox" smooth="true" source="{dataProvider ? dataProvider.bitmap : null}"/>
+        <s:Image id="border" source="{BitmapFactory.getBitmap('whiteBorder')}" width="265" height="330" scaleMode="letterbox" smooth="true"/>
 
         <s:Image id="roza" width="50"
                  scaleMode="letterbox"
                  source="{BitmapFactory.getBitmap('roza')}"
-                 bottom="0" smooth="true"/>
+                 left="15"
+                 bottom="8" smooth="true"/>
         <s:Image id="zoomBtn" source="{BitmapFactory.getBitmap('zoom')}" alpha=".7"
-                 width="26" height="26" right="0" bottom="0" mouseOver="{zoomBtn.alpha = 1}" mouseOut="{zoomBtn.alpha = .7}"
+                 width="26" height="26" right="12" bottom="10" mouseOver="{zoomBtn.alpha = 1}" mouseOut="{zoomBtn.alpha = .7}"
                  click="openLightBox()"/>
     </mx:Canvas>
 
-    <mx:VBox>
+    <mx:VBox verticalGap="2">
         <mx:HBox>
-            <mx:Label text="общая площадь"/>
+            <mx:Label text="общая площадь:"/>
             <mx:Label text="{dataProvider ? dataProvider.square.toString() + 'м &#0178;' : ''}" fontWeight="bold"/>
         </mx:HBox>
         <mx:HBox>
-            <mx:Label text="жилая площадь"/>
+            <mx:Label text="жилая площадь:"/>
             <mx:Label text="{dataProvider ? dataProvider.liveSquare.toString() + 'м &#0178;' : ''}" fontWeight="bold"/>
         </mx:HBox>
         <mx:HBox>
-            <mx:Label text="санузлы"/>
+            <mx:Label text="санузлы:"/>
             <mx:Label text="{dataProvider ? (dataProvider.wctype ? 'раздельные' : 'совместные') : ''}" fontWeight="bold"/>
         </mx:HBox>
         <mx:HBox>
-            <mx:Label text="балкон"/>
+            <mx:Label text="балкон:"/>
             <mx:Label text="{dataProvider ? dataProvider.square.toString() : ''}" fontWeight="bold"/>
         </mx:HBox>
         <mx:HBox>
-            <mx:Label text="цена за м &#0178;"/>
-            <mx:Label text="{dataProvider ? dataProvider.square.toString() : ''}" fontWeight="bold"/>
+            <mx:Label text="цена за м&#0178;:"/>
+            <mx:Label text="{dataProvider ? dataProvider.square.toString() + ' руб.' : ''}" fontWeight="bold"/>
         </mx:HBox>
         <mx:HBox>
-            <mx:Label text="стоимость квартиры" fontWeight="bold"/>
-            <mx:Label text="{dataProvider ? dataProvider.price.toString() + 'руб.' : ''}" color="0x89c20b" fontWeight="bold"/>
+            <mx:Label text="стоимость квартиры:" fontWeight="bold"/>
+            <mx:Label text="{dataProvider ? dataProvider.price.toString() + ' руб.' : ''}" color="0x7da700" fontWeight="bold"/>
         </mx:HBox>
 
+        <mx:Spacer width="100%" height="10"/>
         <comps:Gallery id="gallery" dataProvider="{dataProvider ? dataProvider.gallery : null}" width="263" height="157"/>
+        <mx:Label text="Вид из окна"/>
     </mx:VBox>
 
     <mx:Script><![CDATA[

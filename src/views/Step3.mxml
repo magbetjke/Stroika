@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
-<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:s="spark.components.*" xmlns:views="views.*">
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:s="spark.components.*" xmlns:views="views.*" verticalScrollPolicy="off">
 
     <views:ButtonsBar  top="20" left="20" state="{States.STEP3}"/>
 
-    <mx:HBox verticalAlign="middle" top="50" left="20" horizontalGap="70">
+    <mx:HBox verticalAlign="middle" top="60" left="20" horizontalGap="70">
         <s:Image id="roza" width="50"
                  scaleMode="letterbox"
                  source="{BitmapFactory.getBitmap('roza')}"
@@ -13,7 +13,7 @@
     </mx:HBox>
 
 
-    <views:FloorSquare  dataProvider="{dataProvider}" scaleX=".6" scaleY=".6" top="90" left="20"/>
+    <views:FloorSquare  dataProvider="{dataProvider}" scaleX=".6" scaleY=".6" top="110" left="20"/>
 
     <views:ApartmentSquare id="apSquare" dataProvider="{MainModel.instance.selectedApartment}" width="300" height="300" top="50" right="{apSquare.width + 10}"/>
 

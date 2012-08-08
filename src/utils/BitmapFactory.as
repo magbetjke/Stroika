@@ -62,6 +62,9 @@ public class BitmapFactory {
     [Embed(source="/assets/step1/topBuildingOver.png")]
     private static var topBuildingOver:Class;
 
+    [Embed(source="/assets/floorSquare/border.png")]
+    private static var whiteBorder:Class;
+
 
 
     public static function getBitmap(type:String):Bitmap {
@@ -112,6 +115,8 @@ public class BitmapFactory {
                 return new topBuilding;
             case 'topBuildingOver':
                 return new topBuildingOver;
+            case 'whiteBorder':
+                return new whiteBorder;
             default:
                 return null;
         }

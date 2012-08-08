@@ -28,7 +28,7 @@ public class GalleryProgressBar extends Sprite {
     private var _progressBar:Bitmap;
 
     private var _preloaderWidth:uint = 150;
-    private var _preloaderHeight:uint = 15;
+    private var _preloaderHeight:uint = 10;
 
     private var _generalWidth:Number = 263;
     private var _generalHeight:Number = 157;

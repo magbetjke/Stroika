@@ -2,7 +2,7 @@
 <mx:HBox xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:s="spark.components.*"
          height="40"
          verticalAlign="middle">
-    <s:Label text="ВЫБОР КОРПУСА" color="#000000" fontSize="16" visible="{state == States.STEP1}" includeInLayout="{state == States.STEP1}"/>
+    <s:Label text="ВЫБОР КОРПУСА" color="#000000" fontWeight="bold" fontSize="16" visible="{state == States.STEP1}" includeInLayout="{state == States.STEP1}"/>
     <mx:Canvas id="btnBackToBuilds" visible="{state == States.STEP2 || state == States.STEP3}" includeInLayout="{state == States.STEP2 || state == States.STEP3}"
                mouseOver="{btnLbl.setStyle('color', '#e3e3e3');btnBackToBuilds.filters = [glow]}"
                mouseOut="{btnLbl.setStyle('color', '#FFFFFF');btnBackToBuilds.filters = []}"
@@ -10,6 +10,7 @@
         <s:Image id="btnImg" source="{BitmapFactory.getBitmap('button')}"/>
         <s:Label id="btnLbl"
                  text="ВЫБОР КОРПУСА"
+                 fontWeight="bold"
                  width="100%"
                  verticalCenter="0"
                  fontSize="16"
@@ -17,7 +18,7 @@
                  color="#FFFFFF"/>
     </mx:Canvas>
     <s:Image id="arrow" source="{BitmapFactory.getBitmap('arrow')}" visible="{state == States.STEP2 || state == States.STEP3}" includeInLayout="{state == States.STEP2 || state == States.STEP3}"/>
-    <s:Label text="ВЫБОР ЭТАЖА" color="#000000" fontSize="16" visible="{state == States.STEP2}" includeInLayout="{state == States.STEP2}"/>
+    <s:Label text="ВЫБОР ЭТАЖА" color="#000000" fontWeight="bold" fontSize="16" visible="{state == States.STEP2}" includeInLayout="{state == States.STEP2}"/>
     <mx:Canvas id="btnBackToFacade"
                visible="{state == States.STEP3}" includeInLayout="{state == States.STEP3}"
                mouseOver="{btnBackToFacadeLbl.setStyle('color', '#e3e3e3');btnBackToFacade.filters = [glow]}"
@@ -26,6 +27,7 @@
         <s:Image id="btnBackToFacadeImg" source="{BitmapFactory.getBitmap('button')}"/>
         <s:Label id="btnBackToFacadeLbl"
                  text="ВЫБОР ЭТАЖА"
+                 fontWeight="bold"
                  width="100%"
                  verticalCenter="0"
                  fontSize="16"
@@ -33,7 +35,7 @@
                  color="#FFFFFF"/>
     </mx:Canvas>
     <s:Image id="arrow2" source="{BitmapFactory.getBitmap('arrow')}" visible="{state == States.STEP3}" includeInLayout="{state == States.STEP3}"/>
-    <s:Label text="ВЫБОР КВАРТИРЫ" color="#000000" fontSize="16" visible="{state == States.STEP3}" includeInLayout="{state == States.STEP3}"/>
+    <s:Label text="ВЫБОР КВАРТИРЫ" color="#000000" fontWeight="bold" fontSize="16" visible="{state == States.STEP3}" includeInLayout="{state == States.STEP3}"/>
 
     <mx:GlowFilter id="glow" color="#FFFFFF" blurX="15" blurY="15" strength=".5" alpha=".4" inner="true"/>
     <mx:Script><![CDATA[
