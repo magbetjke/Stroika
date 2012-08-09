@@ -3,7 +3,7 @@
            buttonMode="true"
            click="clickHandler(event)" mouseOver="mouseOverHandler(event)" mouseOut="mouseOutHandler(event)">
     <s:Image id="apartmentImg" source="{_img}" width="36" height="18" scaleMode="stretch"/>
-    <s:Label id="roomsCount" text="{_roomsCount}" color="#FFFFFF" width="100%" verticalAlign="middle" verticalCenter="0" textAlign="center" visible="false"/>
+    <s:Label id="roomsCount" text="{_roomsCount}" color="#FFFFFF" width="100%" verticalAlign="middle" verticalCenter="0" textAlign="center" visible="{!_unavailable &amp;&amp; _stateOver}"/>
     <mx:Script><![CDATA[
         import data.ApartmentData;
         import data.FloorData;
@@ -31,18 +31,21 @@
 
         private var _unavailable:Boolean;
 
+        [Bindable]
+        private var _stateOver:Boolean;
+
         public function select():void {
             if (_unavailable) return;
 
             _img = BitmapFactory.getBitmap(ApartmentData.FREE);
-            roomsCount.visible = true;
+            _stateOver = true;
         }
 
         public function unselect():void {
             if (_unavailable) return;
 
             _img = null;
-            roomsCount.visible = false;
+            _stateOver = false;
         }
 
         public function get apartmentData():ApartmentData {
@@ -56,7 +59,6 @@
 
             if (_apartmentData.state == ApartmentData.OCCUPIED || _apartmentData.state == ApartmentData.SOLD) {
                 _img = BitmapFactory.getBitmap(_apartmentData.state);
-                roomsCount.visible = false;
                 _unavailable = true;
             }
 
@@ -64,6 +66,8 @@
         }
 
         private function clickHandler(event:MouseEvent):void {
+            if (_unavailable) return;
+
             MainModel.instance.selectedApartment = _apartmentData;
             MainModel.instance.selectedFloor = floorData;
 
@@ -71,6 +75,8 @@
         }
 
         private function mouseOverHandler(event:MouseEvent):void {
+            if (_unavailable) return;
+
             ToolTipFacade.instance.openToolTip(_apartmentData, this, 100);
 
         }

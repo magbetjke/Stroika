@@ -44,7 +44,7 @@
             if (_dataProvider && _dataProvider.length){ 
                 var toLoad:Vector.<String> = new <String>[];
                 for each (var url:String in _dataProvider) {
-                    var urlHost:String = MainModel.HOST + url;
+                    var urlHost:String = /*MainModel.HOST +*/ url;
                     CachedBitmaps.isCached(urlHost) ? _bitmaps.push(CachedBitmaps.bitmapByUrl[urlHost]) : toLoad.push(urlHost);
                 }
 

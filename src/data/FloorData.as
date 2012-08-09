@@ -25,6 +25,7 @@ public class FloorData {
 
         for (var i:int = 0; i < 10; i++) {
             var ap:ApartmentData = new ApartmentData();
+            ap.state = ApartmentData.SOLD;
             ap.roomNumber = i + 1;
             ap.floorNumber = _floorNumber;
             ap.buildingType = _buildingType;
