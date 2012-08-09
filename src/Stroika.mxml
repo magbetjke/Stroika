@@ -52,7 +52,7 @@
         import mx.events.FlexEvent;
 
         private function creationCompleteHandler(event:FlexEvent):void {
-             //MainController.instance.init(MainModel.XML_URL);
+             MainController.instance.init(MainModel.XML_URL);
         }
         ]]></fx:Script>
 </s:Application>

@@ -27,6 +27,9 @@ public class MainModel {
     [Bindable]
     public var selectedFloor:FloorData;
 
+    [Bindable]
+    public var selectedBuilding:BuildingData;
+
     public var buildings:Vector.<BuildingData>;
 
     public static const HOST:String = 'http://ostrovmechty.ru';
