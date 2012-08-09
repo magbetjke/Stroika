@@ -30,7 +30,7 @@ public class MainModel {
     [Bindable]
     public var selectedBuilding:BuildingData;
 
-    public var buildings:Vector.<BuildingData>;
+    public var buildings:Vector.<BuildingData> = new Vector.<BuildingData>(5, true);
 
     public static const HOST:String = 'http://ostrovmechty.ru';
 
@@ -40,7 +40,7 @@ public class MainModel {
     [Bindable]
     public var selectedBuildingIndex:int = 0;
 
-    public static const XML_URL:String = 'assets/data.xml';
+    public static const XML_URL:String = '/files/test/data.xml';
 }
 }
 

@@ -81,5 +81,9 @@ public class ApartmentData {
 
         updateBitmap();
     }
+
+    public function get roomNumber():int {
+        return _roomNumber;
+    }
 }
 }

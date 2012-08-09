@@ -173,6 +173,7 @@
         private function buildingClickHandler(event:MouseEvent):void {
             var building:Building = Building(event.currentTarget);
             MainModel.instance.selectedBuildingIndex = 0;
+            MainModel.instance.selectedBuilding = MainModel.instance.buildings[building.index - 1];
             MainModel.instance.state = States.STEP2;
         }
         ]]></fx:Script>

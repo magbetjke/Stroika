@@ -17,11 +17,11 @@ public class FloorData {
     
     public var bitmap:Bitmap;
 
-    public var apartments:Vector.<ApartmentData> = new Vector.<ApartmentData>(0);
+    public var apartments:Vector.<ApartmentData> = new Vector.<ApartmentData>(10, true);
 
     public function FloorData():void {
         //test
-        buildingType = BuildingData.TYPE_23;
+/*        buildingType = BuildingData.TYPE_23;
 
         for (var i:int = 0; i < 10; i++) {
             var ap:ApartmentData = new ApartmentData();
@@ -34,7 +34,7 @@ public class FloorData {
             }
 
             apartments.push(ap);
-        }
+        }*/
     }
 
     public function set floorNumber(value:uint):void {
@@ -42,9 +42,9 @@ public class FloorData {
 
         _floorNumber = value;
 
-        for each (var apartmentData:ApartmentData in apartments) {
+/*        for each (var apartmentData:ApartmentData in apartments) {
             apartmentData.floorNumber = _floorNumber;
-        }
+        }*/
 
         updateBitmap();
     }

@@ -31,7 +31,7 @@
                      width="{width}" height="{height}"
                      visible="{MainModel.instance.state == States.STEP1}" includeInLayout="{MainModel.instance.state == States.STEP1}"/>
         <views:Step2 id="step2"
-                     dataProvider="{new BuildingData()}"
+                     dataProvider="{MainModel.instance.selectedBuilding}"
                      width="{width}" height="{height}"
                      showEffect="Fade"
                      visible="{MainModel.instance.state == States.STEP2}" includeInLayout="{MainModel.instance.state == States.STEP2}"/>

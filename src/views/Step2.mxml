@@ -68,13 +68,28 @@
             floorFacade.addElement(roof);
             //--
 
-            for each (floorData in _dataProvider.floors) {
+            for (var i:int = 19; i > 0; i--) {
+                floorData =  _dataProvider.floors[i - 1];
+                var floor:Floor = new Floor();
+                if (!floorData){
+                    var emptyFloor:FloorData = new FloorData();
+                    emptyFloor.type = FloorType.TECH_FLOOR;
+                    floor.floorData = emptyFloor;
+                    floorFacade.addElement(floor);
+                } else {
+                    floor = new Floor();
+                    floor.floorData = floorData;
+                    floorFacade.addElement(floor)
+                }
+            }
+
+/*            for each (floorData in _dataProvider.floors) {
                 var floor:Floor = new Floor();
                 floor.floorData = floorData;
                 floorFacade.addElement(floor);
-            }
+            }*/
 
-            floorData = new FloorData();
+/*            floorData = new FloorData();
             floorData.type = FloorType.TECH_FLOOR;
             floor = new Floor();
             floor.floorData = floorData;
@@ -85,7 +100,7 @@
                 floor = new Floor();
                 floor.floorData = floorData;
                 floorFacade.addElement(floor);
-            }
+            }*/
 
         }
         ]]></mx:Script>
