@@ -53,8 +53,10 @@
 
         private function clickHandler(event:MouseEvent):void {
             _isNormal = false;
-            MainModel.instance.state = States.STEP2;
+
             MainModel.instance.selectedBuildingIndex = 0;
+            MainModel.instance.selectedBuilding = MainModel.instance.buildings[index - 1];
+            MainModel.instance.state = States.STEP2;
         }
         ]]></mx:Script>
 </mx:Canvas>

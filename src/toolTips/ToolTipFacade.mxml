@@ -10,11 +10,11 @@
         <mx:HBox id="squareBox" y="{_isOutOfBorder ? -50 : 10}" x="10" horizontalGap="0">
 
             <mx:Label text="Площадь: "/>
-            <mx:Label text="{_apartmentData ? _apartmentData.square.toString() + ' м&#0178;' : ''}"/>
+            <mx:Label text="{_apartmentData ? _apartmentData.square.toString() + ' м&#0178;' : ''}" fontWeight="bold"/>
         </mx:HBox>
         <mx:HBox id="priceBox" x="10" y="{_isOutOfBorder ? -30 : 30}" horizontalGap="0">
             <mx:Label text="Цена: "/>
-            <mx:Label text="{_apartmentData ? _apartmentData.price.toString() + ' руб.' : ''}"/>
+            <mx:Label text="{_apartmentData ? _apartmentData.price.toString() + ' руб.' : ''}" color="0x7da700" fontWeight="bold"/>
         </mx:HBox>
     </mx:Canvas>
     <mx:Script><![CDATA[

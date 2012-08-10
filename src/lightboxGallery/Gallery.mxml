@@ -16,6 +16,8 @@
         import data.CachedBitmaps;
         import data.MainModel;
 
+        import mx.controls.Alert;
+
         import mx.validators.StringValidator;
 
         private var _dataProvider:Vector.<String>;
@@ -44,11 +46,11 @@
             if (_dataProvider && _dataProvider.length){ 
                 var toLoad:Vector.<String> = new <String>[];
                 for each (var url:String in _dataProvider) {
-                    var urlHost:String = /*MainModel.HOST +*/ url;
+                    var urlHost:String = /*MainModel.HOST + */url;
                     CachedBitmaps.isCached(urlHost) ? _bitmaps.push(CachedBitmaps.bitmapByUrl[urlHost]) : toLoad.push(urlHost);
                 }
 
-                if (toLoad.length == 0) {
+                if (!toLoad.length) {
                     showNext();
                     return;
                 }
@@ -84,9 +86,9 @@
         }
 
         private function onComplete(event:Event):void {
-            //var bd:BitmapData =  Bitmap(event.currentTarget.content);
             var bitmap:Bitmap = Bitmap(LoaderInfo(event.currentTarget).content);
-            CachedBitmaps.cache(LoaderInfo(event.currentTarget).url, bitmap);
+
+            CachedBitmaps.cache(LoaderInfo(event.currentTarget).url.substr(MainModel.HOST.length), bitmap);
             _bitmaps.push(bitmap);
             decreaseCounter();
         }

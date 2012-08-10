@@ -3,7 +3,7 @@
          horizontalScrollPolicy="off" verticalScrollPolicy="off" clipContent="false" horizontalGap="20" paddingTop="20">
     <mx:Canvas width="265" height="330" verticalScrollPolicy="off" clipContent="false">
         <s:Image id="apartmentImage" width="230" height="300" left="15" top="10" scaleMode="letterbox" smooth="true" source="{dataProvider ? dataProvider.bitmap : null}"/>
-        <s:Image id="border" source="{BitmapFactory.getBitmap('whiteBorder')}" width="265" height="330" scaleMode="letterbox" smooth="true"/>
+        <s:Image id="border" source="{BitmapFactory.getBitmap('whiteBorder')}" width="265" height="330" scaleMode="letterbox" smooth="true" visible="false"/>
 
         <s:Image id="roza" width="50"
                  scaleMode="letterbox"
@@ -30,11 +30,11 @@
         </mx:HBox>
         <mx:HBox>
             <mx:Label text="балкон:"/>
-            <mx:Label text="{dataProvider ? dataProvider.square.toString() : ''}" fontWeight="bold"/>
+            <mx:Label text="{dataProvider ? (dataProvider.balcony ? 'да' : 'нет') : ''}" fontWeight="bold"/>
         </mx:HBox>
         <mx:HBox>
             <mx:Label text="цена за м&#0178;:"/>
-            <mx:Label text="{dataProvider ? dataProvider.square.toString() + ' руб.' : ''}" fontWeight="bold"/>
+            <mx:Label text="{dataProvider &amp;&amp; dataProvider.square > 0 ? Number(dataProvider.price / dataProvider.square).toFixed() + ' руб.' : ''}" fontWeight="bold"/>
         </mx:HBox>
         <mx:HBox>
             <mx:Label text="стоимость квартиры:" fontWeight="bold"/>

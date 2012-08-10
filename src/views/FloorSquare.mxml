@@ -34,8 +34,11 @@
         import data.BuildingData;
         import data.FloorData;
         import data.MainModel;
+        import data.States;
 
         import lightboxGallery.LightBox;
+
+        import mx.binding.utils.BindingUtils;
 
         import mx.events.FlexEvent;
 
@@ -63,7 +66,13 @@
             
             creationComplete = true;
 
-            update();
+            BindingUtils.bindSetter(onStepChange, MainModel.instance, 'state');
+
+        }
+
+        private function onStepChange(state:String):void {
+            if (state == States.STEP3)
+                update();
         }
 
         private function clickElement(event:MouseEvent):void {
@@ -136,11 +145,11 @@
         }
 
         public function set dataProvider(value:FloorData):void {
-            if (_dataProvider == value) return;
+            if (_dataProvider == value)
+                return;
 
             _dataProvider = value;
 
-            update();
         }
 
         private function update():void {
@@ -152,8 +161,27 @@
                 var index:int = _apartments.indexOf(view);
                 var apartmentData:ApartmentData = _dataProvider.apartments[index];
                 view.dataProvider = apartmentData;
+
+                if (apartmentData.state == ApartmentData.SOLD){
+                    view.mouseEnabled = false;
+                    view.mouseChildren = false;
+                    view.alpha = 1;
+                    view.selectedArea.transform.colorTransform = new ColorTransform(.5, .5, .5, .9, 226, 35, 35);
+                } else if (apartmentData.state == ApartmentData.OCCUPIED) {
+                    view.mouseEnabled = false;
+                    view.mouseChildren = false;
+                    view.alpha = 1;
+                    view.selectedArea.transform.colorTransform = new ColorTransform(.5, .5, .5,.9, 70, 70, 70);
+                } else {
+                    view.mouseEnabled = true;
+                    view.mouseChildren = true;
+                    view.alpha = 0;
+                    view.updateSelectedAre();
+                }
+
                 if (apartmentData == MainModel.instance.selectedApartment)
                     view.dispatchEvent(new MouseEvent(MouseEvent.CLICK));
+
             }
         }
 

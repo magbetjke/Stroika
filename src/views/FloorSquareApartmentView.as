@@ -14,15 +14,15 @@ import utils.BitmapFactory;
 import utils.BitmapUtil;
 
 public class FloorSquareApartmentView extends UIComponent {
-    
+
     private var _bitmap:Bitmap = new Bitmap();
 
     private var _hitArea:Sprite = new Sprite;
-    
-    private var _selectedArea:Bitmap = BitmapFactory.getBitmap('selectedArea');
-    
+
+    public var selectedArea:Bitmap = BitmapFactory.getBitmap('selectedArea');
+
     private var _selectionFlag:Bitmap = BitmapFactory.getBitmap('selectionFlag');
-    
+
     private var _state:String;
 
     private var _stroke:DropShadowFilter = new DropShadowFilter(0, 0, 0x000000, .6, 2, 2, 10, 1, true);
@@ -30,7 +30,7 @@ public class FloorSquareApartmentView extends UIComponent {
     private var _dataProvider:ApartmentData;
 
     public var flagRight:int = 0;
-    
+
     public static const NORMAL:String = 'normal';
     public static const OVER:String = 'over';
     public static const SELECTED:String = 'selected';
@@ -42,7 +42,7 @@ public class FloorSquareApartmentView extends UIComponent {
         if (_bitmap == value) return;
 
         _bitmap = value;
-        if (_bitmap){
+        if (_bitmap) {
             _bitmap.width = _bitmap.bitmapData.width;
             _bitmap.height = _bitmap.bitmapData.height;
             _hitArea = BitmapUtil.createHitArea(_bitmap.bitmapData);
@@ -53,8 +53,8 @@ public class FloorSquareApartmentView extends UIComponent {
     private function updateChildren():void {
         if (numChildren > 0)
             removeChildren();
-        
-        
+
+
         scaleChildren();
 
         _bitmap.cacheAsBitmap = true;
@@ -62,31 +62,31 @@ public class FloorSquareApartmentView extends UIComponent {
         _hitArea.visible = false;
         addChild(_hitArea);
         hitArea = _hitArea;
-        _selectedArea.visible = false;
-        _selectedArea.cacheAsBitmap = true;
-        _selectedArea.smoothing = true;
-        _selectedArea.scaleX = _selectedArea.scaleY = 1.7;
-        _selectedArea.alpha = .5;
-        addChild(_selectedArea);
+        selectedArea.visible = false;
+        selectedArea.cacheAsBitmap = true;
+        selectedArea.smoothing = true;
+        selectedArea.scaleX = selectedArea.scaleY = 1.7;
+        selectedArea.alpha = .5;
+        addChild(selectedArea);
 
         _selectionFlag.scaleX = _selectionFlag.scaleY = 1.7;
         _selectionFlag.x = flagRight ? _bitmap.width - flagRight : (_bitmap.width - _selectionFlag.width + 18) >> 1;
         _selectionFlag.y = (_bitmap.height - _selectionFlag.height) >> 1;
         _selectionFlag.visible = _state == SELECTED;
-        _selectedArea.filters = [_stroke];
+        selectedArea.filters = [_stroke];
         addChild(_selectionFlag);
 
-        _selectedArea.mask = _bitmap;
-        _selectedArea.visible = true;
+        selectedArea.mask = _bitmap;
+        selectedArea.visible = true;
 
     }
-    
+
     private function scaleChildren():void {
-        if (width > 0 || height > 0){
+        if (width > 0 || height > 0) {
             var scaleX:Number = width > 0 ? width / _bitmap.width : 1;
             var scaleY:Number = height > 0 ? height / _bitmap.height : 1;
             var resultScale:Number = Math.min(scaleX, scaleY);
-            
+
             _bitmap.scaleX = resultScale;
             _bitmap.scaleY = resultScale;
 
@@ -118,6 +118,11 @@ public class FloorSquareApartmentView extends UIComponent {
         _dataProvider = value;
 
         bitmap = _dataProvider.bitmap;
+    }
+
+    public function updateSelectedAre():void {
+        selectedArea = null;
+        selectedArea = BitmapFactory.getBitmap('selectedArea');
     }
 }
 }
