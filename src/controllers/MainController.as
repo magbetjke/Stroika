@@ -89,7 +89,6 @@ public class MainController {
                         apartmentData.liveSquare = Number(apartment.livesquare);
                         apartmentData.square = Number(apartment.square);
                         apartmentData.price =  Number(apartment.price);
-                        trace(XML(apartment.status).toString());
                         switch (XML(apartment.status).toString()) {
                             case ApartmentData.SOLD:
                                 apartmentData.state = ApartmentData.SOLD;
@@ -101,14 +100,12 @@ public class MainController {
                                 apartmentData.state = ApartmentData.OCCUPIED;
                                 break;
                             default:
-                                apartmentData.state = ApartmentData.OCCUPIED;
+                                apartmentData.state = ApartmentData.FREE;
                         }
-                        //if (apartment.gallery){
                         var photos:XMLList = XML(apartment.gallery).children();
                         for each (var photo:XML in photos) {
                             apartmentData.gallery.push(XML(photo.view).toString());
                         }
-                        //}
                         floorData.apartments[apartmentData.roomNumber - 1] = apartmentData;
                     }
                     buildingData.floors[floorData.floorNumber - 1] = floorData;

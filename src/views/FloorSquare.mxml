@@ -50,7 +50,7 @@
         private var _factory:IBitmapFactory;
 
         private var _dataProvider:FloorData;
-        
+
         private var creationComplete:Boolean;
 
         [Bindable]
@@ -63,7 +63,7 @@
             addEventListener(Event.ADDED_TO_STAGE, addedToStageHandler);
 
             _apartments = new <FloorSquareApartmentView>[ap1, ap2, ap3, ap4, ap5, ap6, ap7, ap8, ap9, ap10];
-            
+
             creationComplete = true;
 
             BindingUtils.bindSetter(onStepChange, MainModel.instance, 'state');
@@ -154,7 +154,7 @@
 
         private function update():void {
             if (!creationComplete || !_dataProvider) return;
-            
+
             floorPlan.source = _dataProvider.bitmap;
 
             for each (var view:FloorSquareApartmentView in _apartments) {
@@ -162,7 +162,7 @@
                 var apartmentData:ApartmentData = _dataProvider.apartments[index];
                 view.dataProvider = apartmentData;
 
-                if (apartmentData.state == ApartmentData.SOLD){
+                if (apartmentData.state == ApartmentData.SOLD) {
                     view.mouseEnabled = false;
                     view.mouseChildren = false;
                     view.alpha = 1;
@@ -171,12 +171,12 @@
                     view.mouseEnabled = false;
                     view.mouseChildren = false;
                     view.alpha = 1;
-                    view.selectedArea.transform.colorTransform = new ColorTransform(.5, .5, .5,.9, 70, 70, 70);
+                    view.selectedArea.transform.colorTransform = new ColorTransform(.5, .5, .5, .9, 70, 70, 70);
                 } else {
                     view.mouseEnabled = true;
                     view.mouseChildren = true;
                     view.alpha = 0;
-                    view.updateSelectedAre();
+                    view.updateSelectedArea();
                 }
 
                 if (apartmentData == MainModel.instance.selectedApartment)
@@ -186,7 +186,7 @@
         }
 
         private function openLightBox():void {
-            if (_dataProvider && _dataProvider.bitmap){
+            if (_dataProvider && _dataProvider.bitmap) {
                 var bitmap:Bitmap = new Bitmap(_dataProvider.bitmap.bitmapData);
                 LightBox.show(bitmap);
             }

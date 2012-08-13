@@ -120,8 +120,9 @@ public class FloorSquareApartmentView extends UIComponent {
         bitmap = _dataProvider.bitmap;
     }
 
-    public function updateSelectedAre():void {
+    public function updateSelectedArea():void {
         selectedArea = null;
+        selectedArea = new Bitmap();
         selectedArea = BitmapFactory.getBitmap('selectedArea');
     }
 }

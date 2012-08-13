@@ -40,7 +40,7 @@ public class MainModel {
     [Bindable]
     public var selectedBuildingIndex:int = 0;
 
-    public static const XML_URL:String = '/files/test/data.xml'/*'assets/data.xml'*/;
+    public static const XML_URL:String = 'http://www.ostrovmechty.ru/xml/data.xml'/*'/xml/data.xml'*//*'/files/test/data.xml'*//*'assets/data.xml'*/;
 }
 }
 
