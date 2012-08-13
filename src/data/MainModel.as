@@ -1,6 +1,8 @@
 package data {
 import data.BuildingData;
 
+import flash.events.Event;
+
 import mx.states.State;
 
 //Singleton Class
@@ -34,13 +36,26 @@ public class MainModel {
 
     public static const HOST:String = 'http://www.ostrovmechty.ru';
 
+    private var _allowActions:Boolean = false;
+
     [Bindable]
     public var state:String = States.STEP1;
 
     [Bindable]
     public var selectedBuildingIndex:int = 0;
 
-    public static const XML_URL:String = 'http://www.ostrovmechty.ru/xml/data.xml'/*'/xml/data.xml'*//*'/files/test/data.xml'*//*'assets/data.xml'*/;
+    public static const XML_URL:String = /*'http://www.ostrovmechty.ru/xml/data.xml'*/'/xml/data.xml'/*'/files/test/data.xml'*//*'assets/data.xml'*/;
+
+    public function get allowActions():Boolean {
+        return _allowActions;
+    }
+
+    public function set allowActions(value:Boolean):void {
+        _allowActions = value;
+
+        if (_allowActions)
+            dispatchEvent(new Event('xmlLoadingComplete'));
+    }
 }
 }
 

@@ -62,15 +62,15 @@ public class MainController {
 
     private function onError(event:ErrorEvent):void {
 
-        Alert.show('XML loading failed!');
+        Alert.show('Ошибка загрузки XML!');
 
         removeLoader();
     }
 
     private function parseXML(xml:XML):void {
         var levels:XMLList = xml.children();
-        for each (var level:XML in levels){
-            for each (var building:XML in level.children()) {
+        //for each (var level:XML in levels){
+            for each (var building:XML in levels) {
                 var buildingData:BuildingData = new BuildingData();
                 buildingData.buildingType = uint(building.@number) == 2 || uint(building.@number) == 3 ? BuildingData.TYPE_23 : BuildingData.TYPE_145;
                 var floors:XMLList = building.children();
@@ -83,11 +83,13 @@ public class MainController {
                         var apartmentData:ApartmentData = new ApartmentData();
                         apartmentData.roomNumber = int(apartment.@number);
                         apartmentData.balcony = false;
-                        apartmentData.rooms = int(apartment.roomcount);
+                        apartmentData.rooms = int(apartment.roomCount);
                         apartmentData.buildingType = buildingData.buildingType;
                         apartmentData.floorNumber = floorData.floorNumber;
-                        apartmentData.liveSquare = Number(apartment.livesquare);
+                        apartmentData.liveSquare = Number(apartment.liveSquare);
+                        apartmentData.balcony = apartment.balcony == 'true';
                         apartmentData.square = Number(apartment.square);
+                        apartmentData.wctype = apartment.wcType == 'combined';
                         apartmentData.price =  Number(apartment.price);
                         switch (XML(apartment.status).toString()) {
                             case ApartmentData.SOLD:
@@ -112,10 +114,12 @@ public class MainController {
                 }
                 MainModel.instance.buildings[building.@number - 1] = buildingData;
 
-            }
+           // }
         }
 
         populateEmptyData();
+
+        MainModel.instance.allowActions = true;
     }
 
     private function populateEmptyData():void {
@@ -149,8 +153,7 @@ public class MainController {
                 MainModel.instance.buildings[i] = buildingData;
             }
         }
-        var buildings:Object = MainModel.instance.buildings;
-        trace(buildings);
+
     }
 
     private function removeLoader():void {

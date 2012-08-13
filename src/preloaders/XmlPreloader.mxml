@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<comps:Dialog xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:comps="lightboxGallery.*" width="180" height="40">
+    <mx:Label text="Загрузка данных..." fontSize="15" paddingTop="8" width="100%" textAlign="center"/>
+    <mx:Script><![CDATA[
+        import data.MainModel;
+
+        private function init():void {
+            MainModel.instance.addEventListener('xmlLoadingComplete', onLoadXML);
+        }
+
+        public static function show():XmlPreloader {
+            var dialog:XmlPreloader = new XmlPreloader();
+            dialog.init();
+            dialog.openPopUp();
+            return dialog;
+        }
+
+        private function onLoadXML(event:Event):void {
+            MainModel.instance.removeEventListener('xmlLoadingComplete', onLoadXML);
+            dispatchCancel();
+        }
+        ]]></mx:Script>
+</comps:Dialog>

@@ -8,6 +8,7 @@
     <fx:Style>
 
         @namespace mx "library://ns.adobe.com/flex/mx";
+        @namespace preloaders "preloaders.*";
 
         mx|Panel {
             dropShadowVisible: true;
@@ -21,6 +22,13 @@
             borderThicknessRight: 2;*/
             roundedBottomCorners: true;
             cornerRadius: 10;
+        }
+
+        preloaders|XmlPreloader {
+            cornerRadius: 0;
+            borderThickness: 2;
+            borderColor: #000000;
+            borderAlpha: 1;
         }
 
     </fx:Style>
@@ -51,8 +59,11 @@
 
         import mx.events.FlexEvent;
 
+        import preloaders.XmlPreloader;
+
         private function creationCompleteHandler(event:FlexEvent):void {
-             MainController.instance.init(MainModel.XML_URL);
+            XmlPreloader.show();
+            MainController.instance.init(MainModel.XML_URL);
         }
         ]]></fx:Script>
 </s:Application>

@@ -49,7 +49,7 @@
             if (_dataProvider == value) return;
             
             _dataProvider = value;
-            
+
             updateBuildingFacade();
         }
 
@@ -69,7 +69,7 @@
             //--
 
             for (var i:int = 19; i > 0; i--) {
-                floorData =  _dataProvider.floors[i - 1];
+                floorData = _dataProvider.floors[i - 1];
                 var floor:Floor = new Floor();
                 if (!floorData){
                     var emptyFloor:FloorData = new FloorData();
@@ -82,26 +82,6 @@
                     floorFacade.addElement(floor)
                 }
             }
-
-/*            for each (floorData in _dataProvider.floors) {
-                var floor:Floor = new Floor();
-                floor.floorData = floorData;
-                floorFacade.addElement(floor);
-            }*/
-
-/*            floorData = new FloorData();
-            floorData.type = FloorType.TECH_FLOOR;
-            floor = new Floor();
-            floor.floorData = floorData;
-            floorFacade.addElement(floor);
-            if (_dataProvider.buildingType == BuildingData.TYPE_23){
-                floorData = new FloorData();
-                floorData.type = FloorType.TECH_FLOOR;
-                floor = new Floor();
-                floor.floorData = floorData;
-                floorFacade.addElement(floor);
-            }*/
-
         }
         ]]></mx:Script>
 </mx:Canvas>

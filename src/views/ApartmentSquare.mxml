@@ -18,19 +18,19 @@
     <mx:VBox verticalGap="2">
         <mx:HBox>
             <mx:Label text="общая площадь:"/>
-            <mx:Label text="{dataProvider ? dataProvider.square.toString() + 'м &#0178;' : ''}" fontWeight="bold"/>
+            <mx:Label text="{dataProvider ? dataProvider.square.toString() + ' м&#0178;' : ''}" fontWeight="bold"/>
         </mx:HBox>
         <mx:HBox>
             <mx:Label text="жилая площадь:"/>
-            <mx:Label text="{dataProvider ? dataProvider.liveSquare.toString() + 'м &#0178;' : ''}" fontWeight="bold"/>
+            <mx:Label text="{dataProvider ? dataProvider.liveSquare.toString() + ' м&#0178;' : ''}" fontWeight="bold"/>
         </mx:HBox>
         <mx:HBox>
             <mx:Label text="санузлы:"/>
-            <mx:Label text="{dataProvider ? (dataProvider.wctype ? 'раздельные' : 'совместные') : ''}" fontWeight="bold"/>
+            <mx:Label text="{dataProvider ? (dataProvider.wctype ? 'совместный' : 'раздельный') : ''}" fontWeight="bold"/>
         </mx:HBox>
         <mx:HBox>
             <mx:Label text="балкон:"/>
-            <mx:Label text="{dataProvider ? (dataProvider.balcony ? 'да' : 'нет') : ''}" fontWeight="bold"/>
+            <mx:Label text="{dataProvider ? (dataProvider.balcony ? 'есть' : 'нет') : ''}" fontWeight="bold"/>
         </mx:HBox>
         <mx:HBox>
             <mx:Label text="цена за м&#0178;:"/>

@@ -171,6 +171,7 @@
         }
 
         private function buildingClickHandler(event:MouseEvent):void {
+            if (!MainModel.instance.allowActions) return;
             var building:Building = Building(event.currentTarget);
             MainModel.instance.selectedBuildingIndex = 0;
             MainModel.instance.selectedBuilding = MainModel.instance.buildings[building.index - 1];

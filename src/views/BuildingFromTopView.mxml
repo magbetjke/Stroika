@@ -52,6 +52,8 @@
         }
 
         private function clickHandler(event:MouseEvent):void {
+            if (!MainModel.instance.allowActions) return;
+
             _isNormal = false;
 
             MainModel.instance.selectedBuildingIndex = 0;

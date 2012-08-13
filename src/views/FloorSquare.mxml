@@ -175,8 +175,8 @@
                 } else {
                     view.mouseEnabled = true;
                     view.mouseChildren = true;
+                    view.selectedArea.transform.colorTransform = new ColorTransform(1, 1, 1, .5);
                     view.alpha = 0;
-                    view.updateSelectedArea();
                 }
 
                 if (apartmentData == MainModel.instance.selectedApartment)
