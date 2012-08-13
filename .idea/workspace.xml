@@ -65,8 +65,8 @@
       <property name="field_breakpoints_groupByClasses" value="true" />
       <property name="method_breakpoints_groupByClasses" value="true" />
       <property name="exception_breakpoints_viewId" value="TABLE" />
-      <property name="exception_breakpoints_groupByClasses" value="true" />
       <property name="field_breakpoints_viewId" value="TABLE" />
+      <property name="exception_breakpoints_groupByClasses" value="true" />
       <property name="method_breakpoints_groupByMethods" value="false" />
     </ui_properties>
   </component>
@@ -75,6 +75,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+<<<<<<< HEAD
       <file leaf-file-name="Floor.mxml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/Floor.mxml">
           <provider selected="true" editor-type-id="text-editor">
@@ -86,25 +87,34 @@
       </file>
       <file leaf-file-name="ButtonsBar.mxml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/ButtonsBar.mxml">
+=======
+      <file leaf-file-name="FloorSquare.mxml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/FloorSquare.mxml">
+>>>>>>> old assets
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="119" selection-start="2024" selection-end="2024" vertical-scroll-proportion="0.0">
+            <state line="67" column="43" selection-start="4402" selection-end="4402" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BuildingsFromTop.mxml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/BuildingsFromTop.mxml">
+      <file leaf-file-name="MainModel.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/data/MainModel.as">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state line="2" column="21" selection-start="139" selection-end="139" vertical-scroll-proportion="0.0">
+=======
+            <state line="35" column="32" selection-start="829" selection-end="829" vertical-scroll-proportion="0.0">
+>>>>>>> old assets
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BuildingFromTopView.mxml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/BuildingFromTopView.mxml">
+      <file leaf-file-name="LightBox.mxml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/lightboxGallery/LightBox.mxml">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state line="49" column="105" selection-start="1960" selection-end="1960" vertical-scroll-proportion="0.0">
               <folding />
             </state>
@@ -145,11 +155,26 @@
                 <marker date="1344855753392" expanded="true" signature="8603:8798" placeholder="{...}" />
                 <marker date="1344855753392" expanded="true" signature="9020:9222" placeholder="{...}" />
                 <marker date="1344855753392" expanded="true" signature="9077:9212" placeholder="{...}" />
+=======
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding>
+                <marker date="1343778653000" expanded="false" signature="1883:2062" placeholder="..." />
+                <marker date="1343778653000" expanded="true" signature="2164:2697" placeholder="{...}" />
+                <marker date="1343778653000" expanded="true" signature="2409:2471" placeholder="{...}" />
+                <marker date="1343778653000" expanded="true" signature="2524:2604" placeholder="{...}" />
+                <marker date="1343778653000" expanded="true" signature="2756:2906" placeholder="{...}" />
+                <marker date="1343778653000" expanded="true" signature="2948:2989" placeholder="{...}" />
+                <marker date="1343778653000" expanded="true" signature="3031:3443" placeholder="{...}" />
+                <marker date="1343778653000" expanded="true" signature="3049:3344" placeholder="{...}" />
+                <marker date="1343778653000" expanded="true" signature="3161:3330" placeholder="{...}" />
+                <marker date="1343778653000" expanded="true" signature="3365:3408" placeholder="{...}" />
+>>>>>>> old assets
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="MainModel.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/data/MainModel.as">
           <provider selected="true" editor-type-id="text-editor">
@@ -159,6 +184,8 @@
           </provider>
         </entry>
       </file>
+=======
+>>>>>>> old assets
       <file leaf-file-name="Step3.mxml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/Step3.mxml">
           <provider selected="true" editor-type-id="text-editor">
@@ -171,12 +198,17 @@
       <file leaf-file-name="ApartmentSquare.mxml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/ApartmentSquare.mxml">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state line="1" column="0" selection-start="22" selection-end="22" vertical-scroll-proportion="-0.625">
               <folding>
                 <marker date="1344591679386" expanded="false" signature="2730:2828" placeholder="..." />
                 <marker date="1344591679386" expanded="true" signature="2942:3140" placeholder="{...}" />
                 <marker date="1344591679386" expanded="true" signature="2996:3130" placeholder="{...}" />
               </folding>
+=======
+            <state line="35" column="138" selection-start="2036" selection-end="2036" vertical-scroll-proportion="0.0">
+              <folding />
+>>>>>>> old assets
             </state>
           </provider>
         </entry>
@@ -321,6 +353,11 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="CHECKOUT_INCLUDE_TAGS" value="false" />
+    <option name="UPDATE_CHANGES_POLICY" value="STASH" />
+    <option name="LINE_SEPARATORS_CONVERSION" value="ASK" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
@@ -347,10 +384,9 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="y" value="22" />
+    <option name="width" value="1920" />
+    <option name="height" value="1026" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -396,10 +432,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="Stroika" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -584,8 +616,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -596,7 +628,7 @@
       <recent name="$PROJECT_DIR$/src/assets" />
     </key>
   </component>
-  <component name="RunManager" selected="Flash App.Stroika">
+  <component name="RunManager">
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -609,19 +641,16 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" class_name="" method_name="" output_log_level="" package_name="" scope="Class">
-      <option name="BCName" value="" />
-      <option name="launcherParameters">
-        <LauncherParameters>
-          <option name="browserFamily" value="FIREFOX" />
-          <option name="launcherType" value="OSDefault" />
-          <option name="playerPath" value="FlashPlayerDebugger.exe" />
-        </LauncherParameters>
-      </option>
-      <option name="moduleName" value="" />
-      <option name="trusted" value="true" />
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" adl_options="" air_descriptor_path="" air_program_params="" air_publisher_id="" air_root_dir_path="" air_run_mode="AppDescriptor" browser_family="FIREFOX" class_name="" debugger_sdk="Module SDK" html_or_swf_file_path="" launcher_type="OSDefault" main_class_name="" method_name="" module_name="" output_log_level="" package_name="" player_path="/Applications/Flash Player Debugger.app" port="0" run_mode="HtmlOrSwfFile" run_trusted="true" scope="Class" socket_policy_port="0" url_to_launch="http://">
       <method>
         <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="FlexRunConfigurationType" factoryName="Flex" browser_family="FIREFOX" debugger_sdk="Module SDK" html_or_swf_file_path="" launcher_type="OSDefault" main_class_name="" module_name="" player_path="/Applications/Flash Player Debugger.app" run_mode="HtmlOrSwfFile" run_trusted="true" url_to_launch="http://">
+      <method>
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
         <option name="Maven.BeforeRunTask" enabled="false" />
@@ -658,68 +687,6 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
-      <option name="BCName" value="" />
-      <option name="adlOptions" value="" />
-      <option name="airProgramParameters" value="" />
-      <option name="appDescriptorForEmulator" value="Generated" />
-      <option name="debugTransport" value="USB" />
-      <option name="debuggerSdkRaw" value="BC SDK" />
-      <option name="emulator" value="NexusOne" />
-      <option name="emulatorAdlOptions" value="" />
-      <option name="fullScreenHeight" value="0" />
-      <option name="fullScreenWidth" value="0" />
-      <option name="launchUrl" value="false" />
-      <option name="launcherParameters">
-        <LauncherParameters>
-          <option name="browserFamily" value="FIREFOX" />
-          <option name="launcherType" value="OSDefault" />
-          <option name="playerPath" value="FlashPlayerDebugger.exe" />
-        </LauncherParameters>
-      </option>
-      <option name="mobileRunTarget" value="Emulator" />
-      <option name="moduleName" value="" />
-      <option name="overriddenMainClass" value="" />
-      <option name="overriddenOutputFileName" value="" />
-      <option name="overrideMainClass" value="false" />
-      <option name="runTrusted" value="true" />
-      <option name="screenHeight" value="0" />
-      <option name="screenWidth" value="0" />
-      <option name="url" value="http://" />
-      <option name="usbDebugPort" value="7936" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -770,7 +737,7 @@
       <method />
     </configuration>
     <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Flash App.Stroika" />
+      <item index="0" class="java.lang.String" itemvalue="Flex.Stroika" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -805,13 +772,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
+=======
+    <frame x="0" y="22" width="1920" height="1026" extended-state="0" />
+    <editor active="false" />
+>>>>>>> old assets
     <layout>
-      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28348213" sideWeight="0.9754273" order="3" side_tool="false" content_ui="tabs" />
@@ -826,9 +797,30 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959402" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22809829" sideWeight="0.71651787" order="0" side_tool="false" content_ui="combo" />
+=======
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959402" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22809829" sideWeight="0.71875" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28348213" sideWeight="0.9754273" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+>>>>>>> old assets
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
+=======
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28125" sideWeight="0.8482906" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+>>>>>>> old assets
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -866,10 +858,7 @@
     <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
-    <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
-    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
     <option name="LAST_COMMIT_MESSAGE" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -926,27 +915,24 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/toolTips/ToolTipFacade.mxml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="117" selection-start="705" selection-end="705" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/toolTips/ToolTipStep1.mxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="78" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
+=======
     <entry file="file://$PROJECT_DIR$/src/data/BuildingData.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="20" selection-start="282" selection-end="282" vertical-scroll-proportion="0.0">
+>>>>>>> old assets
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/toolTips/ToolTipStep1.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="78" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0">
+=======
     <entry file="file://$PROJECT_DIR$/src/assets/floorSquare/type1/floorPlan.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -955,13 +941,49 @@
     <entry file="file://$PROJECT_DIR$/src/Stroika.mxml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="17" selection-start="883" selection-end="883" vertical-scroll-proportion="0.0">
+>>>>>>> old assets
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/BuildingData.as">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state line="10" column="20" selection-start="282" selection-end="282" vertical-scroll-proportion="0.0">
+=======
+        <state line="7" column="22" selection-start="425" selection-end="425" vertical-scroll-proportion="0.0">
+>>>>>>> old assets
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/assets/floorSquare/type1/floorPlan.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Stroika.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="17" selection-start="883" selection-end="883" vertical-scroll-proportion="0.0">
+=======
+    <entry file="file://$PROJECT_DIR$/src/controllers/MainController.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="129" column="0" selection-start="4937" selection-end="4937" vertical-scroll-proportion="0.0">
+>>>>>>> old assets
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/views/Step1.mxml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="22" selection-start="425" selection-end="425" vertical-scroll-proportion="0.0">
+=======
+    <entry file="file://$PROJECT_DIR$/src/views/Floor.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="46" selection-start="2327" selection-end="2327" vertical-scroll-proportion="0.0">
+>>>>>>> old assets
           <folding />
         </state>
       </provider>
@@ -973,34 +995,59 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/assets/data.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4234" column="85" selection-start="187182" selection-end="187182" vertical-scroll-proportion="0.0">
+=======
+    <entry file="file://$PROJECT_DIR$/src/views/ButtonsBar.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="119" selection-start="2024" selection-end="2024" vertical-scroll-proportion="0.0">
+>>>>>>> old assets
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/data/CachedBitmaps.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="27" selection-start="371" selection-end="371" vertical-scroll-proportion="0.0">
+=======
+    <entry file="file://$PROJECT_DIR$/src/assets/data.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4234" column="85" selection-start="187182" selection-end="187182" vertical-scroll-proportion="0.0">
+>>>>>>> old assets
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/data/FloorData.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="54" column="0" selection-start="1509" selection-end="1509" vertical-scroll-proportion="0.0">
+=======
+    <entry file="file://$PROJECT_DIR$/src/views/BuildingsFromTop.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="21" selection-start="139" selection-end="139" vertical-scroll-proportion="0.0">
+>>>>>>> old assets
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/data/ApartmentData.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="26" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0">
+=======
+    <entry file="file://$PROJECT_DIR$/src/data/FloorData.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="0" selection-start="1509" selection-end="1509" vertical-scroll-proportion="0.0">
+>>>>>>> old assets
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/views/ApartmentSquare.mxml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="0" selection-start="22" selection-end="22" vertical-scroll-proportion="-0.625">
@@ -1009,11 +1056,18 @@
             <marker date="1344591679386" expanded="true" signature="2942:3140" placeholder="{...}" />
             <marker date="1344591679386" expanded="true" signature="2996:3130" placeholder="{...}" />
           </folding>
+=======
+    <entry file="file://$PROJECT_DIR$/src/views/BuildingFromTopView.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="105" selection-start="1960" selection-end="1960" vertical-scroll-proportion="0.0">
+          <folding />
+>>>>>>> old assets
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/FloorSquare.mxml">
+    <entry file="file://$PROJECT_DIR$/src/data/CachedBitmaps.as">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state line="162" column="49" selection-start="7934" selection-end="7947" vertical-scroll-proportion="-14.041667">
           <folding>
             <marker date="1344855753392" expanded="false" signature="3403:3783" placeholder="..." />
@@ -1037,16 +1091,25 @@
             <marker date="1344855753392" expanded="true" signature="9020:9222" placeholder="{...}" />
             <marker date="1344855753392" expanded="true" signature="9077:9212" placeholder="{...}" />
           </folding>
+=======
+        <state line="15" column="27" selection-start="371" selection-end="371" vertical-scroll-proportion="0.0">
+          <folding />
+>>>>>>> old assets
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/data/MainModel.as">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state line="41" column="64" selection-start="951" selection-end="951" vertical-scroll-proportion="0.0">
+=======
+        <state line="35" column="32" selection-start="829" selection-end="829" vertical-scroll-proportion="0.0">
+>>>>>>> old assets
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/controllers/MainController.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="71" column="0" selection-start="1732" selection-end="1732" vertical-scroll-proportion="-18.4">
@@ -1061,6 +1124,33 @@
         </state>
       </provider>
     </entry>
+=======
+    <entry file="file://$PROJECT_DIR$/src/lightboxGallery/Gallery.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="91" column="34" selection-start="3726" selection-end="3726" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lightboxGallery/LightBox.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1343778653000" expanded="false" signature="1883:2062" placeholder="..." />
+            <marker date="1343778653000" expanded="true" signature="2164:2697" placeholder="{...}" />
+            <marker date="1343778653000" expanded="true" signature="2409:2471" placeholder="{...}" />
+            <marker date="1343778653000" expanded="true" signature="2524:2604" placeholder="{...}" />
+            <marker date="1343778653000" expanded="true" signature="2756:2906" placeholder="{...}" />
+            <marker date="1343778653000" expanded="true" signature="2948:2989" placeholder="{...}" />
+            <marker date="1343778653000" expanded="true" signature="3031:3443" placeholder="{...}" />
+            <marker date="1343778653000" expanded="true" signature="3049:3344" placeholder="{...}" />
+            <marker date="1343778653000" expanded="true" signature="3161:3330" placeholder="{...}" />
+            <marker date="1343778653000" expanded="true" signature="3365:3408" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+>>>>>>> old assets
   </component>
   <component name="masterDetails">
     <states>
