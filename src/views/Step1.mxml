@@ -17,7 +17,7 @@
                         mouseOver="buildingMouseOver(event)"
                         mouseOut="buildingMouseOut(event)" cacheAsBitmap="true"/>
         <views:Building id="building2"
-                        index="2"
+                        index="5"
                         buttonMode="true"
                         maskImage="{BitmapFactory.getBitmap('maskB2')}"
                         x="310" y="70"
@@ -26,7 +26,7 @@
                         mouseOver="buildingMouseOver(event)"
                         mouseOut="buildingMouseOut(event)" cacheAsBitmap="true"/>
         <views:Building id="building3"
-                        index="3"
+                        index="4"
                         toolTipOffset="15"
                         buttonMode="true"
                         maskImage="{BitmapFactory.getBitmap('maskB3')}"
@@ -39,13 +39,13 @@
                         x="190" y="95"
                         toolTipOffset="25"
                         buttonMode="true"
-                        index="4"
+                        index="2"
                         click="buildingClickHandler(event)"
                         mouseOver="buildingMouseOver(event)"
                         mouseOut="buildingMouseOut(event)" cacheAsBitmap="true"/>
         <views:Building id="building5"
                         maskImage="{BitmapFactory.getBitmap('maskB5')}"
-                        index="5"
+                        index="3"
                         buttonMode="true"
                         toolTipOffset="10"
                         x="425" y="100"
@@ -97,17 +97,12 @@
 
         import utils.BitmapFactory;
 
-        //[Embed(source="/assets/1.jpg")]
         [Embed(source="/assets/1_result.jpg")]
         private var _background:Class;
 
-        //[Embed(source="/assets/buildingsBlur.png")]
         [Embed(source="/assets/buildingsBlur_result.jpg")]
         private var _backgroundBlur:Class;
 
-        [Embed(source="/assets/buildingMask.png")]
-        private var _buildingMask:Class;
-        
         private var _buildings:Vector.<Building>;
 
         private function onMouseOver(event:MouseEvent):void {
